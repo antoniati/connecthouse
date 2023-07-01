@@ -1,0 +1,78 @@
+.service-card {
+    /* Dimensão */
+    width: 100%;
+    height: 400px;
+
+    /* Posicionamento & Flexibilidade*/
+    position: relative;
+    flex: none;
+
+    /* Bordas */
+    border: 2px solid var(--main-color);
+    border-radius: 20px;
+
+    /* Cores */
+    background-color: var(--white-color);
+}
+
+.service-card:hover {
+    cursor: grab;
+}
+
+.service-card-icon {
+    /* Dimensão & Preechimento */
+    width: 100%;
+    padding: 25px;
+
+    /* Exposição */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-card-texts {
+    /* Dimensão & Preechimento */
+    width: 100%;
+    height: 100%;
+    max-height: 200px;
+    padding: 25px;
+
+    /* Exposição */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    /* Cores */
+    color: var(--dark-color);
+}
+
+.service-card-title {
+    /* Fonte (Tamanho, Peso, Alinhamento) */
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.service-card-description {
+    /* Fonte (Tamanho, Peso, Alinhamento) */
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.service-card-footer {
+    /* Dimensão & Preechimento */
+    width: 100%;
+    height: 25%;
+
+    /* Exposição */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-card-footer button {
+    /* Dimensão */
+    width: 80%;
+}

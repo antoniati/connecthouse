@@ -1,0 +1,241 @@
+/* Sessão de Apresentação */
+#hero {
+    /* Dimensão */
+    width: 100%;
+    height: 100vh;
+   
+    /* Exibição, Alinhamento e Espaçamento*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+
+    /* Cor de fundo e Imagem */
+    background: 
+        linear-gradient(
+            180deg, 
+            rgba(20, 24, 33, 0.5) 26.04%, 
+            rgba(20, 24, 33, 0.8) 61.09%, 
+            #141821 100%
+        ), 
+        linear-gradient(
+            180deg, 
+            rgba(20, 24, 33, 0.6) 100%, 
+            rgba(20, 24, 33, 0.8) 80%, 
+            #141821 100%
+        ), 
+        url("../../assets/background-img.jpg") center;
+    
+        background-size: cover;
+}
+
+/* Textos da Sessão de Apresentação */
+.hero-texts {
+    /* Dimensão  */
+    width: 90%;
+    max-width: 968px;
+    
+    /* Exibição, Alinhamento, Espaçamento */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Título de Apresentação */
+.hero-title {
+    /* Tamanho, peso, espaçamento e alinhamento */
+    font-size: 56px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-align: center;
+
+    /* cor da fonte */
+    color: var(--main-color);
+}
+
+/* Descrição de Apresentação */
+.hero-description {
+    /* Tamanho, peso, espaçamento e alinhamento */
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 2.56rem;
+    letter-spacing: 2px;
+    text-align: center;
+
+    /* cor da fonte */
+    color: var(--white-color);
+}
+
+/* Botões da Sessão de Aprensentação */
+.hero-buttons {
+    /* Exibição & Espaçamento*/
+    display: flex;
+    gap: 20px;
+
+    /* Transição das modificações*/
+    transition: all 0.3s ease;
+}
+
+
+/* Sessão de Serviços */
+#services {
+    /* Dimensão */
+    width: 100%;
+    height: 100vh;
+    
+    /* Exibição, Alinhamento e Espaçamento*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px
+}
+
+.services-description {
+    width: 90%;
+    margin: 20px;
+    font-size: 30px;
+    max-width: 1120px;
+    text-align: center;
+    line-height: 2.56rem;
+}
+
+/* Sessão de Sobre */
+#about {
+    /* Dimensão */
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/* Conteúdo da Sessão Sobre */
+.about-content {
+    /* Dimensão */
+    width: 100%;
+    max-width: 1120px;
+    position: relative;
+    
+    /* Exibição, Alinhamento e Espaçamento*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Conteúdo do lado Direito da Sessão Sobre */
+.about-content-right {
+    width: 100%;
+    /* Exibição, Alinhamento e Espaçamento*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.about-description {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 2.56rem;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.first-description {
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 1.6rem;
+}
+
+/* Conteúdo do lado Esquerdo da Sessão Sobre */
+.about-content-left {
+    width: 100%;
+    /* Exibição, Alinhamento e Espaçamento*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* Posicionamento */
+    position: relative;
+}
+
+.about-content-left .image-man{
+    /* Dimensão e Posição */
+    width: 350px;
+    position: absolute;
+    border-radius: 10px;
+}
+.about-content-left .image-cable{
+    /* Dimensão e Posição */
+    width: 200px;
+    position: absolute;
+    bottom: 2rem;
+    left: -2rem;
+    border-radius: 10px;
+}
+
+/* Estilos Responsivos */
+@media only screen and (max-width: 1200px) {
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-content-left {
+        display: none;
+    }
+
+    .about-description {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .hero-description {
+        /* Tamanho, peso e espaçamento da fonte */
+        font-size: 28px;
+        line-height: 2.6rem;
+        letter-spacing: 0px;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .hero-title {
+        font-size: 52px;
+    }
+
+    .hero-description {
+        font-size: 26px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .hero-title {
+        font-size: 42px;
+    }
+
+    .hero-description {
+        font-size: 22px;
+    }
+
+}
+
+@media only screen and (max-width: 391px) {
+    .hero-texts {
+        width: 95%;
+    }
+    
+    .hero-title {
+        font-size: 38px;
+        margin-top: 5rem
+    }
+}

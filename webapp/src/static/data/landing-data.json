@@ -1,0 +1,20 @@
+{
+    "sections": [
+        {
+            "title": "Connect House",
+            "description": "Líder em automação residencial e predial, transformamos sua casa ou empresa em um ambiente conectado, seguro e inteligente"
+        },
+        {
+            "title": "Serviços",
+            "description": "descrição dos serviços"
+        },
+        {
+            "title": "Projetos",
+            "description": "descrição dos projetos"
+        },
+        {
+            "title": "Sobre",
+            "description": "descrição sobre"
+        }
+    ]
+}

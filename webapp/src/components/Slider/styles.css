@@ -1,0 +1,13 @@
+/* Container do Swiper Slider */
+.slider-wrapper {
+    /* Dimensão */
+    width: 100%;
+    max-width: 1120px;
+}
+
+/* Item do Swiper Slider */
+.slider-item {
+    /* Dimensão e flexibilidade */
+    width: 90%;
+    flex: none;
+}
