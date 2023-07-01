@@ -12,13 +12,11 @@ import projectsData from "../../static/data/projects-data.json";
 
 import "./styles.css"
 
-
 const SliderCoverFlow: React.FC = () => {
     return (
         <Swiper
             className="slider_container"
             effect={"coverflow"}
-            grabCursor={true}
             centeredSlides={true}
             loop={true}
             slidesPerView={"auto"}

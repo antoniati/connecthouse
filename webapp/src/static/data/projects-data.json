@@ -1,45 +1,45 @@
 {
     "projects": [
         {
-            "image":"https://connecthouse.vercel.app/images/image-one",
+            "image":"https://connecthouse.vercel.app/images/image-one.png",
             "title": "Instalção de algum serviço"
         },
 
         {
-            "image":"https://connecthouse.vercel.app/images/image-two",
+            "image":"https://connecthouse.vercel.app/images/image-two.png",
             "title": "Montagem de Algum serviço"
         },
 
         {
-            "image":"https://connecthouse.vercel.app/images/image-three",
+            "image":"https://connecthouse.vercel.app/images/image-three.png",
             "title": "Organização de algum serviço"
         },
         {
-            "image":"https://connecthouse.vercel.app/images/image-four",
+            "image":"https://connecthouse.vercel.app/images/image-four.png",
             "title": "Instalção de algum serviço"
         },
 
         {
-            "image":"https://connecthouse.vercel.app/images/image-five",
+            "image":"https://connecthouse.vercel.app/images/image-five.png",
             "title": "Montagem de Algum serviço"
         },
 
         {
-            "image":"https://connecthouse.vercel.app/images/image-six",
+            "image":"https://connecthouse.vercel.app/images/image-six.png",
             "title": "Organização de algum serviço"
         },
         {
-            "image":"https://connecthouse.vercel.app/images/image-seven",
+            "image":"https://connecthouse.vercel.app/images/image-seven.png",
             "title": "Instalção de algum serviço"
         },
 
         {
-            "image":"https://connecthouse.vercel.app/images/image-eight",
+            "image":"https://connecthouse.vercel.app/images/image-eight.png",
             "title": "Montagem de Algum serviço"
         },
 
         {
-            "image":"https://connecthouse.vercel.app/images/image-nine",
+            "image":"https://connecthouse.vercel.app/images/image-nine.png",
             "title": "Organização de algum serviço"
         }
     ]

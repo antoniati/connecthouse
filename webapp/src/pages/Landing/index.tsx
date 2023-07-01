@@ -74,10 +74,17 @@ const Landig: React.FC = () => {
 
             <section id="projects">
                 <Title overlay="Projetos" text="Projetos" /> 
-                <p>Veja alguns de nossos projetos feitos para empresa e pessoas de sucesso</p>
                 <SliderCoverFlow/>
-
+                    <Link to="http://localhost:5173/about">
+                        <Button text="Ver Projetos" textColor="#FFF" fillColor="#FA9428" hoverColor="#FAA64C" hoverText="white" borderColor="#FA9428" />
+                    </Link>
             </section>
+
+            <footer>
+                <div className="content">
+                    Footer
+                </div>
+            </footer>
         </>
     );
 }
