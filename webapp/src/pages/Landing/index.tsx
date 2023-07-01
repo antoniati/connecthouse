@@ -64,7 +64,7 @@ const Landig: React.FC = () => {
                         <p className="about-description">Imagine ter total controle sobre a sua residência ou prédio, tudo ao alcance de suas mãos. Nossa equipe altamente qualificada e dedicada trabalha incansavelmente para criar soluções personalizadas que se adequem perfeitamente ao seu estilo de vida e às suas demandas de segurança.</p>
                         <div className="about-buttons">
                             <Link to="http://localhost:5173/about">
-                                <Button text="Saiba Mais" textColor="#FA9428" fillColor="transparent" hoverColor="#FAA64C" hoverText="white" borderColor="#FA9428" />
+                                <Button text="Saiba Mais" textColor="white" fillColor="#FA9428" hoverColor="#FAA64C" hoverText="white" borderColor="#FA9428" />
                             </Link>
                         </div>
                     </div>
