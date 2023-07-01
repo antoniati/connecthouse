@@ -12,6 +12,7 @@ import litleBigMan from "../../assets/litle-big-man.png";
 import imageCable from "../../assets/cable.png";
 
 import "./styles.css";
+import SliderCoverFlow from "../../components/SliderCoverFlow";
 
 const Landig: React.FC = () => {
 
@@ -69,6 +70,13 @@ const Landig: React.FC = () => {
                         </div>
                     </div>
                 </div>
+            </section>
+
+            <section id="projects">
+                <Title overlay="Projetos" text="Projetos" /> 
+                <p>Veja alguns de nossos projetos feitos para empresa e pessoas de sucesso</p>
+                <SliderCoverFlow/>
+
             </section>
         </>
     );
