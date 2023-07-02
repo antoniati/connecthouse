@@ -16,6 +16,7 @@ import "./styles.css";
 import Description from "../../components/Description";
 import SectionContainer from "../../components/SectionContainer";
 import SliderCoverFlow from "../../components/SliderCoverFlow";
+import ContactForm from "../../components/ContactForm";
 
 const Landing: React.FC = () => {
     // Estado Inicial dos Títulos da página Landing
@@ -23,6 +24,7 @@ const Landing: React.FC = () => {
     const [servicesTitle, setServicesTitle] = useState("");
     const [aboutTitle, setAboutTitle] = useState("");
     const [projectsTitle, setProjectsTitle] = useState("");
+    const [contactTitle, setContactTitle] = useState("");
 
     
     // Estado Inicial das Descrições da página Landing
@@ -30,6 +32,7 @@ const Landing: React.FC = () => {
     const [servicesDescription, setServicesDescription] = useState("");
     const [aboutDescription, setAboutDescription] = useState("");
     const [projectsDescription, setProjectsDescription] = useState("");
+    const [contactDescription, setContactDescription] = useState("");
 
     useEffect(() => {
         // 
@@ -40,12 +43,14 @@ const Landing: React.FC = () => {
         setServicesTitle(sectionsData[1].title ?? "");
         setProjectsTitle(sectionsData[2].title ?? "");
         setAboutTitle(sectionsData[3].title ?? "");
+        setContactTitle(sectionsData[4].title ?? "");
 
         // Atualiza Descrições da página Landing
         setHeroDescription(sectionsData[0].description ?? "");
         setServicesDescription(sectionsData[1].description ?? "");
         setProjectsDescription(sectionsData[2].description ?? "");
         setAboutDescription(sectionsData[3].description ?? "");
+        setContactDescription(sectionsData[4].description ?? "");
     }, []);
 
     return (
@@ -132,8 +137,14 @@ const Landing: React.FC = () => {
             
             <SectionContainer id="projects-section">
                 <Title overlay={projectsTitle} text={projectsTitle}/>
-                <Description descriptionText={projectsDescription}/>
-                <SliderCoverFlow />
+                 <Description descriptionText={projectsDescription}/>
+            <SliderCoverFlow />
+            </SectionContainer>
+
+            <SectionContainer id="contact-section">
+                <Title overlay={contactTitle} text={contactTitle}/>
+                <Description descriptionText={contactDescription} />
+                <ContactForm />
             </SectionContainer>
         </div>
     );

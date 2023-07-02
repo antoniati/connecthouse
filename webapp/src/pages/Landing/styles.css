@@ -143,8 +143,10 @@
 }
 
 /* Sessão de PROJETOS */
-#projects-section {
-    height: auto;
+#projects-section,
+#contact-section {
+    margin-top: 7rem;
+    height: auto !important;
 }
 
 /* Estilos Responsivos  */
