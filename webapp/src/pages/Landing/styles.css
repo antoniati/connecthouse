@@ -173,15 +173,16 @@
         font-size: 46px;
     }
 
+    .hero-buttons {
+        width: 100%;
+        flex-direction: column;
+        margin-top: 1.6rem;
+    }
+
     #projects-section p,
     #services-section p,
     .hero-texts p {
         font-size: 26px !important;
-    }
-    
-
-    #services-section {
-        height: auto !important;
     }
 
     #about-section p {
@@ -192,32 +193,28 @@
         font-size: 18px !important;
     }
 
-    .hero-buttons {
-        width: 100%;
-        flex-direction: column;
-        margin-top: 1.6rem;
+    #services-section {
+        height: auto !important;
     }
 
+    #projects-section,
     .about-content {
         margin-top: 5rem;
     }
-
-    #projects-section {
-        margin-top: 5rem;
-      }    
 }
 
 @media screen and (max-width: 400px){
     .hero-title {
         font-size: 32px;
     }
+    
+    #projects-section,
+    .about-content {
+        margin-top: 10rem;
+    }
 
     .about-subtitle {
         font-size: 26px;
-    }
-
-    .about-content {
-        margin-top: 10rem;
     }
 
     #projects-section p,
@@ -226,8 +223,8 @@
         font-size: 18px !important;
     }
     
-    #services-section .service-card-footer button,
-    .hero-buttons button {
+    .hero-buttons button,
+    #services-section .service-card-footer button {
         font-size: 18px !important;
     }
 }
