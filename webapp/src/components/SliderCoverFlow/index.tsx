@@ -35,14 +35,18 @@ const SliderCoverFlow: React.FC = () => {
         >
             {projectsData.projects.map((project, index) => (
                 <SwiperSlide className="slider-item-coverflow" key={index}>
-                    <p>{project.title}</p>
+                    <p className="slider-item-description">Clique para Visualizar</p>
                     <img src={project.image} alt="image" />
                 </SwiperSlide>
             ))}
             <div className="slider-controler">
-                <div className="swiper-button-prev slider-arrow"></div>
-                <div className="swiper-button-next slider-arrow"></div>
-                <div className="swiper-pagination"></div>
+                <div className="swiper-button-prev slider-arrow">
+                    <img src="https://connecthouse.vercel.app/icons/arrrow-left.svg" alt="Seta Para esquerda" />
+                </div>
+                <div className="swiper-button-next slider-arrow">
+                    <img src="https://connecthouse.vercel.app/icons/arrow-rigth.svg" alt="Seta para direita" />
+                </div>
+                <div className="swiper-pagination pagination-projects"></div>
             </div>
         </Swiper>
     );

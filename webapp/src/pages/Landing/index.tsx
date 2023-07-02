@@ -1,92 +1,142 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
+import landingData from "../../static/data/landing-data.json";
+
 import Navbar from "../../components/Navbar";
 import Title from "../../components/Title";
 import Button from "../../components/Button";
 import Slider from "../../components/Slider";
 
-import landingData from "../../static/data/landing-data.json";
+import internalWorkImage from "../../assets/internal-work.png";
+import externalWorkImage from "../../assets/external-work.png";
 
-import litleBigMan from "../../assets/litle-big-man.png";
-import imageCable from "../../assets/cable.png";
 
 import "./styles.css";
+import Description from "../../components/Description";
+import SectionContainer from "../../components/SectionContainer";
 import SliderCoverFlow from "../../components/SliderCoverFlow";
 
-const Landig: React.FC = () => {
-
+const Landing: React.FC = () => {
+    // Estado Inicial dos Títulos da página Landing
     const [heroTitle, setHeroTitle] = useState("");
+    const [servicesTitle, setServicesTitle] = useState("");
+    const [aboutTitle, setAboutTitle] = useState("");
+    const [projectsTitle, setProjectsTitle] = useState("");
+
+    
+    // Estado Inicial das Descrições da página Landing
     const [heroDescription, setHeroDescription] = useState("");
+    const [servicesDescription, setServicesDescription] = useState("");
+    const [aboutDescription, setAboutDescription] = useState("");
+    const [projectsDescription, setProjectsDescription] = useState("");
 
     useEffect(() => {
-        const { sections } = landingData;
-        const { title: heroTitleData, description: heroDescriptionData } = sections[0];
+        // 
+        const {sectionsData} = landingData;
 
+        // Atualiza Títulos da página Landing
+        setHeroTitle(sectionsData[0].title ?? "");
+        setServicesTitle(sectionsData[1].title ?? "");
+        setProjectsTitle(sectionsData[2].title ?? "");
+        setAboutTitle(sectionsData[3].title ?? "");
 
-        setHeroTitle(heroTitleData);
-        setHeroDescription(heroDescriptionData);
+        // Atualiza Descrições da página Landing
+        setHeroDescription(sectionsData[0].description ?? "");
+        setServicesDescription(sectionsData[1].description ?? "");
+        setProjectsDescription(sectionsData[2].description ?? "");
+        setAboutDescription(sectionsData[3].description ?? "");
     }, []);
 
     return (
-        <>
+        <div id="landing">
             <Navbar />
 
-            <section id="hero">
+            <SectionContainer id="hero-section">
                 <div className="hero-texts">
-                    <h1 className="hero-title"> {heroTitle} </h1>
-                    <p className="hero-description"> {heroDescription} </p>
+                    <h1 className="hero-title"> 
+                        {heroTitle} 
+                    </h1>
+                    <Description descriptionText={heroDescription}/>
                 </div>
+
                 <div className="hero-buttons">
-                    <Link to="http://localhost:5173/about">
-                        <Button text="Saiba Mais" textColor="#FFF" fillColor="#FA9428" hoverColor="#FAA64C" hoverText="white" borderColor="#FA9428" />
+                    <Link to="/about">
+                        <Button 
+                            text="Saiba Mais" 
+                            textColor="#FFF" 
+                            fillColor="#FA9428" 
+                            hoverColor="#FAA64C" 
+                            hoverText="white" 
+                            borderColor="#FA9428" 
+                        />
                     </Link>
                     <Link to="#contact">
-                        <Button text="Entre em Contato" textColor="#FA9428" fillColor="#141821" hoverColor="#FAA64C" hoverText="white" borderColor="#FA9428" />
+                        <Button 
+                            text="Entre em Contato"
+                             textColor="#FA9428" 
+                             fillColor="#141821" 
+                             hoverColor="#FAA64C" 
+                             hoverText="white" 
+                             borderColor="#FA9428" 
+                        />
                     </Link>
                 </div>
-            </section>
+            </SectionContainer>
 
-            <section id="services">
-                <Title overlay="Serviços" text="Serviços" />
-                <p className="services-description">Aproveite o melhor da tecnologia moderna com nossas soluções personalisadas e confiáveis</p>
+            <SectionContainer id="services-section">
+                <Title overlay={servicesTitle} text={servicesTitle} />
+                <Description descriptionText={servicesDescription}/>
                 <Slider />
-            </section>
+            </SectionContainer>
 
-            <section id="about">
+            <SectionContainer id="about-section">
                 <div className="about-content">
                     <div className="about-content-left">
-                        <img src={litleBigMan} alt="Pequeno Grande Homem" className="image-man" />
-                        <img src={imageCable} alt="Pequeno Grande Homem" className="image-cable" />
+                        <img 
+                            className="internalwork-image" 
+                            src={internalWorkImage} 
+                            alt="Pequeno Grande Homem" 
+                        />
+                        <img 
+                            className="externalwork-image" 
+                            src={externalWorkImage} 
+                            alt="Pequeno Grande Homem" 
+                        />
                     </div>
+
                     <div className="about-content-right">
-                        <Title overlay="Sobre" text="Sobre" />
-                        <p className="about-description first-description">Conecte-se ao futuro com a Connect House</p>
-                        <p className="about-description">Imagine ter total controle sobre a sua residência ou prédio, tudo ao alcance de suas mãos. Nossa equipe altamente qualificada e dedicada trabalha incansavelmente para criar soluções personalizadas que se adequem perfeitamente ao seu estilo de vida e às suas demandas de segurança.</p>
+                        <Title overlay={aboutTitle} text={aboutTitle} />
+                        <h2 className="about-subtitle">
+                            Conecte-se ao futuro com a {heroTitle}
+                        </h2>
+                        <p className="about-description">
+                            {aboutDescription}
+                        </p>
+                        
                         <div className="about-buttons">
                             <Link to="http://localhost:5173/about">
-                                <Button text="Saiba Mais" textColor="white" fillColor="#FA9428" hoverColor="#FAA64C" hoverText="white" borderColor="#FA9428" />
+                                <Button 
+                                    text="Saiba Mais" 
+                                    textColor="white" 
+                                    fillColor="#FA9428" 
+                                    hoverColor="#FAA64C" 
+                                    hoverText="white" 
+                                    borderColor="#FA9428" 
+                                />
                             </Link>
                         </div>
                     </div>
                 </div>
-            </section>
-
-            <section id="projects">
-                <Title overlay="Projetos" text="Projetos" /> 
-                <SliderCoverFlow/>
-                    <Link to="http://localhost:5173/about">
-                        <Button text="Ver Projetos" textColor="#FFF" fillColor="#FA9428" hoverColor="#FAA64C" hoverText="white" borderColor="#FA9428" />
-                    </Link>
-            </section>
-
-            <footer>
-                <div className="content">
-                    Footer
-                </div>
-            </footer>
-        </>
+            </SectionContainer>
+            
+            <SectionContainer id="projects-section">
+                <Title overlay={projectsTitle} text={projectsTitle}/>
+                <Description descriptionText={projectsDescription}/>
+                <SliderCoverFlow />
+            </SectionContainer>
+        </div>
     );
 }
 
-export default Landig;
+export default Landing;

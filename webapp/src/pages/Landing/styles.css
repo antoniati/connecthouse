@@ -1,45 +1,30 @@
-/* Sessão de Apresentação */
-#hero {
-    /* Dimensão */
-    width: 100%;
-    height: 768px;
-
-    /* Exibição, Alinhamento e Espaçamento*/
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 40px;
+#hero-section {
 
     /* Cor de fundo e Imagem */
     background:
         linear-gradient(180deg,
             rgba(20, 24, 33, 0.5) 26.04%,
             rgba(20, 24, 33, 0.8) 61.09%,
-            #141821 100%),
+            var(--dark-color) 100%),
         linear-gradient(180deg,
             rgba(20, 24, 33, 0.6) 100%,
             rgba(20, 24, 33, 0.8) 80%,
-            #141821 100%),
+            var(--dark-color) 100%),
         url("../../assets/background-img.jpg") center;
 
     background-size: cover;
 }
 
-/* Textos da Sessão de Apresentação */
+/* Textos da Sessão de APRESENTAÇÃO */
 .hero-texts {
-    /* Dimensão  */
-    width: 90%;
-    max-width: 968px;
-
-    /* Exibição, Alinhamento, Espaçamento */
+    /* Exibição, Alinhamento e Direção */
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
     gap: 20px;
 }
 
-/* Título de Apresentação */
+/* Título de APRESENTAÇÃO */
 .hero-title {
     /* Tamanho, peso, espaçamento e alinhamento */
     font-size: 56px;
@@ -51,110 +36,88 @@
     color: var(--main-color);
 }
 
-/* Descrição de Apresentação */
-.hero-description {
-    /* Tamanho, peso, espaçamento e alinhamento */
-    font-size: 30px;
-    font-weight: 400;
-    line-height: 2.56rem;
-    letter-spacing: 2px;
-    text-align: center;
-
-    /* cor da fonte */
-    color: var(--white-color);
-}
-
-/* Botões da Sessão de Aprensentação */
+/* Botões da Sessão de APRESENTAÇÃO */
 .hero-buttons {
-    /* Exibição & Espaçamento*/
+    /* Exibição e Espaçamento*/
+    width: 100%;
+    max-width: 968px;
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 20px;
-
-    /* Transição das modificações*/
-    transition: all 0.3s ease;
 }
 
 
-/* Sessão de Serviços */
+/* Sessão de SERVIÇOS */
 #services {
     /* Dimensão */
     width: 100%;
-    height: auto;
+    height: 768px;
 
-    /* Exibição, Alinhamento e Espaçamento*/
+    /* Exibição, Alinhamento e Direção */
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     gap: 20px;
-
 }
 
-.services-description {
-    width: 90%;
-    margin: 20px;
-    font-size: 30px;
-    max-width: 1120px;
-    text-align: center;
-    line-height: 2.56rem;
-}
-
-/* Sessão de Sobre */
-#about {
-    /* Dimensão */
-    width: 100%;
-    height: 768px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 2rem;
-
-}
-
-/* Conteúdo da Sessão Sobre */
+/* Sessão SOBRE */
+/* Conteúdo da Sessão SOBRE */
 .about-content {
-    /* Dimensão */
-    width: 100%;
-    max-width: 1120px;
+    /* Dimensão e Posição*/
+    width: 95%;
+    max-width: 968px;
     position: relative;
 
-    /* Exibição, Alinhamento e Espaçamento*/
+    /* Exibição, Alinhamento e Direção*/
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* Conteúdo do lado Direito da Sessão Sobre */
+/* Conteúdo do lado Direito da Sessão SOBRE */
 .about-content-right {
+    /* Dimensão */
     width: 100%;
-    /* Exibição, Alinhamento e Espaçamento*/
+
+    /* Exibição, Alinhamento e Direção*/
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 20px;
-}
 
-
-.about-description {
-    font-size: 22px;
-    font-weight: 400;
-    line-height: 2.56rem;
-    letter-spacing: 1px;
     text-align: center;
 }
 
-.first-description {
-    font-size: 30px;
-    font-weight: 600;
-    text-transform: uppercase;
-    margin-top: 1.6rem;
+/* Descrição da Sessão SOBRE */
+.about-description {
+    /* Tamanho, peso, espaçamento e alinhamento */
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    line-height: 2.56rem;
 }
 
-/* Conteúdo do lado Esquerdo da Sessão Sobre */
+/* Descrição da Sessão SOBRE */
+.about-subtitle {
+    /* Tamanho, peso */
+    font-size: 30px;
+    font-weight: 600;
+
+    /* caixa-alta (maíuscula) */
+    text-transform: uppercase;
+}
+
+/* Botões da Sessão SOBRE */
+.about-buttons {
+    padding: 1.6rem;
+}
+
+/* Conteúdo do lado Esquerdo da Sessão SOBRE */
 .about-content-left {
     width: 100%;
-    /* Exibição, Alinhamento e Espaçamento*/
+    /* Exibição, Alinhamento e Direção*/
     display: flex;
     align-items: center;
     justify-content: center;
@@ -163,119 +126,108 @@
     position: relative;
 }
 
-.about-content-left .image-man {
+.internalwork-image {
     /* Dimensão e Posição */
     width: 350px;
+    border-radius: 25px;
     position: absolute;
-    border-radius: 10px;
 }
 
-.about-content-left .image-cable {
+.externalwork-image {
     /* Dimensão e Posição */
     width: 200px;
+    border-radius: 25px;
     position: absolute;
     bottom: 2rem;
     left: -2rem;
-    border-radius: 10px;
 }
 
-/* Sessão de Projetos */
-#projects {
-    /* Dimensão */
-    width: 100%;
-    height: 768px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 40px;
-
+/* Sessão de PROJETOS */
+#projects-section {
+    height: auto;
 }
 
-#projects p {
-    padding: 1rem;
-    background-color: var(--white-color);
-    color: var(--dark-color);
-    font-size: 20px;
-    border-radius: 6px;
-    box-shadow: 0 0 0.6 #141821;
-}
-
-footer {
-    width: 100%;
-    height: 400px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 40px;
-}
-
-footer .content {
-    border-top: 2px solid var(--main-color);
-    width: 1120px;
-}
-
-/* Estilos Responsivos */
-@media only screen and (max-width: 1200px) {
-    .about-content {
-        flex-direction: column;
+/* Estilos Responsivos  */
+@media screen and (max-width: 1075px){
+    .internalwork-image {
+        /* Dimensão */
+        width: 300px;
     }
+    
+    .externalwork-image {
+        /* Dimensão */
+        width: 150px;
+        left: 2rem;
+    }
+    
+}
 
+@media screen and (max-width: 1024px){
     .about-content-left {
         display: none;
     }
-
-    .about-description {
-        width: 90%;
-    }
 }
 
-@media only screen and (max-width: 768px) {
-
-    .hero-description,
-    .services-description {
-        /* Tamanho, peso e espaçamento da fonte */
-        font-size: 26px;
-        line-height: 2.6rem;
-        letter-spacing: 0px;
-    }
-}
-
-@media only screen and (max-width: 640px) {
+@media screen and (max-width: 600px){
     .hero-title {
-        font-size: 52px;
+        font-size: 46px;
+    }
+
+    #projects-section p,
+    #services-section p,
+    .hero-texts p {
+        font-size: 26px !important;
     }
     
-    .hero-buttons {
-        flex-direction: column;
-    }
-}
 
-@media only screen and (max-width: 500px) {
-    .hero-title {
-        font-size: 42px;
+    #services-section {
+        height: auto !important;
     }
 
-    .about-description,
-    .services-description,
-    .hero-description {
-        font-size: 22px;
-    }
-
-}
-
-@media only screen and (max-width: 391px) {
-    .hero-texts {
-        width: 95%;
-    }
-
-    .hero-title {
-        font-size: 30px;
-    }
-    .about-description,
-    .services-description,
-    .hero-description {
+    #about-section p {
         font-size: 18px;
     }
+
+    #services-section .service-card-description {
+        font-size: 18px !important;
+    }
+
+    .hero-buttons {
+        width: 100%;
+        flex-direction: column;
+        margin-top: 1.6rem;
+    }
+
+    .about-content {
+        margin-top: 5rem;
+    }
+
+    #projects-section {
+        margin-top: 5rem;
+      }    
+}
+
+@media screen and (max-width: 400px){
+    .hero-title {
+        font-size: 32px;
+    }
+
+    .about-subtitle {
+        font-size: 26px;
+    }
+
+    .about-content {
+        margin-top: 10rem;
+    }
+
+    #projects-section p,
+    #services-section p,
+    .hero-texts p {
+        font-size: 18px !important;
+    }
     
+    #services-section .service-card-footer button,
+    .hero-buttons button {
+        font-size: 18px !important;
+    }
 }

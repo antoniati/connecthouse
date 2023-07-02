@@ -1,54 +1,49 @@
-#services {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    position: relative;
-    gap: 20px;
-}
-
 .title-container {
+    /* Dimensão */
     width: 100%;
+    padding: 2rem;
+   
+    /* Exibição, Alinhamento e Direção */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    /* Posicionamento */
     position: relative;
-    margin-top: 5rem;
 }
 
 .title-overlay {
+    /* Dimensão */
     width: 100%;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 128px;
-    font-weight: 500;
-    color: transparent;
     -webkit-text-stroke-width: 1px;
+
+    /* Tamanho, peso, espaçamento e alinhamento */
+    font-size: 128px;
+    text-align: center;
+    font-weight: 500;
+    
+    /* Posicionamneto */
+    position: absolute;
+    
+    /* Cor e Opacidade */
+    color: transparent;
     -webkit-text-stroke-color: var(--main-color);
     opacity: 0.25;
-    position: absolute;
+
+    /* Transformação e Transição */
+    text-transform: uppercase;
     transition: all 0.5s ease-in-out;
 }
 
 .title-text {
-    background-color: var(--main-color);
+    /* Preechimento, Cor de Fundo e Transição */
     padding: 0.6rem;
+    background-color: var(--main-color);
     transition: all 0.5s ease-in-out;
 }
 
-.description-section {
-    width: 70%;
-    font-size: 24px;
-    line-height: 3rem;
-    letter-spacing: 2px;
-    text-align: center;
-    margin-top: 1rem;
-    transition: all 0.5s ease-in-out;
-}
-
-
+/* Estilos Respoinsivos */
 @media(max-width: 645px) {
     .title-overlay {
         font-size: 100px;
@@ -56,13 +51,6 @@
 
     .title-text {
         font-size: 22px;
-    }
-
-    .description {
-        width: 97%;
-        font-size: 20px;
-        line-height: 2rem;
-        letter-spacing: normal;
     }
 }
 

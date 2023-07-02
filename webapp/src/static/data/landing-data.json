@@ -1,20 +1,20 @@
 {
-    "sections": [
+    "sectionsData": [
         {
             "title": "Connect House",
             "description": "Líder em automação residencial e predial, transformamos sua casa ou empresa em um ambiente conectado, seguro e inteligente"
         },
         {
             "title": "Serviços",
-            "description": "descrição dos serviços"
+            "description": "Aproveite o melhor da tecnologia moderna com nossas soluções personalisadas e confiáveis"
         },
         {
             "title": "Projetos",
-            "description": "descrição dos projetos"
+            "description": "Conheça os projetos personalizados e inovadores que executamos com maestria"
         },
         {
             "title": "Sobre",
-            "description": "descrição sobre"
+            "description": "Imagine ter total controle sobre a sua residência ou prédio, tudo ao alcance de suas mãos. Nossa equipe altamente qualificada e dedicada trabalha incansavelmente para criar soluções que se adequem perfeitamente ao seu estilo de vida e às suas demandas de segurança."
         }
     ]
 }
