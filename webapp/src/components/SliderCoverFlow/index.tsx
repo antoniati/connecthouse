@@ -19,6 +19,7 @@ const SliderCoverFlow: React.FC = () => {
             effect={"coverflow"}
             centeredSlides={true}
             loop={true}
+            grabCursor={true}
             slidesPerView={"auto"}
             coverflowEffect={{
                 rotate: 0,
@@ -35,7 +36,9 @@ const SliderCoverFlow: React.FC = () => {
         >
             {projectsData.projects.map((project, index) => (
                 <SwiperSlide className="slider-item-coverflow" key={index}>
-                    <p className="slider-item-description">Clique para Visualizar</p>
+                    <a href="http://localhost:5173/projeto-cftv">
+                        <p className="slider-item-description">Clique para Visualizar</p>
+                    </a>
                     <img src={project.image} alt="image" />
                 </SwiperSlide>
             ))}

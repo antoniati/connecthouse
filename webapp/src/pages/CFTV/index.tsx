@@ -1,18 +1,19 @@
 import React from "react";
 
-import Navbar from "../../../components/Navbar";
-import SectionContainer from "../../../components/SectionContainer";
+import Navbar from "../../components/Navbar";
+import SectionContainer from "../../components/SectionContainer";
 
 import "./styles.css";
-import Title from "../../../components/Title";
-import Button from "../../../components/Button";
-import Footer from "../../../components/Footer";
+import Title from "../../components/Title";
+import Button from "../../components/Button";
+import Footer from "../../components/Footer";
 import { Link } from "react-router-dom";
 
 const About: React.FC = () => {
     return (
         <>
             <Navbar />
+            <div id="#top-page"></div>
             <SectionContainer id="project-container">
                 <div className="project-item">
                     <div className="slider-project-item">

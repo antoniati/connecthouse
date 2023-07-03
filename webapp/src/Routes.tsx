@@ -10,7 +10,7 @@ import About from "./pages/About";
 import Services from "./pages/Services";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
-import CFTV from "./pages/Projects/CFTV";
+import CFTV from "./pages/CFTV";
 
 const AppRoutes: React.FC = () => {
     return(
@@ -21,7 +21,7 @@ const AppRoutes: React.FC = () => {
                 <Route path="/servicos" element={<Services />} />
                 <Route path="/contato" element={<Contact />} />
                 <Route path="/projetos" element={<Projects />} />
-                <Route path="/projetos/cftv" element={<CFTV />} />
+                <Route path="/projeto-cftv" element={<CFTV />} />
             </Routes>
         </Router>
     )
