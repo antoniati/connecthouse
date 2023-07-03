@@ -1,0 +1,31 @@
+#contato-page {
+    background-color: var(--white-color);
+    padding-top: 7rem !important;
+}
+
+#contato-page {
+    color: var(--dark-color);
+    margin: 0;
+}
+
+#contato-page .contact-form button {
+    color: var(--main-color) !important;
+    background-color: var(--dark-color) !important;
+}
+#contato-page .contact-form {
+    background-color: #fcfcfc;
+    border: 1px solid var(--main-color);
+}
+
+#contato-page .footer-container {
+    margin-top: 2rem;
+}
+#contato-page footer {
+    border: 0;
+}
+
+@media screen and (max-width: 500px){
+    #contato-page .description-text {
+       font-size: 18px !important;
+    }
+}

@@ -1,19 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+
+import Navbar from "../../components/Navbar";
+import SectionContainer from "../../components/SectionContainer";
+import Description from "../../components/Description";
+import ContactForm from "../../components/ContactForm";
+import Footer from "../../components/Footer";
+
+import landingData from "../../static/data/landing-data.json";
 
 import "./styles.css";
-import SectionContainer from "../../components/SectionContainer";
-import Footer from "../../components/Footer";
-import Navbar from "../../components/Navbar";
 
 const Contato: React.FC = () => {
+    const [contactDescription, setContactDescription] = useState("");
+
+    useEffect(() => {
+        setContactDescription(landingData.sectionsData[4].description ?? "");
+    }, []);
+
     return (
-        <>
+        <div className="page-container">
             <Navbar />
             <SectionContainer id="contato-page">
-                <h1>Contato</h1>
-            </SectionContainer>
+                <Description descriptionText={contactDescription} />
+                <ContactForm />
             <Footer />
-        </>
+            </SectionContainer>
+        </div>
     );
 }
 
