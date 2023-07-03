@@ -4,7 +4,6 @@ import Navbar from "../../components/Navbar";
 import SectionContainer from "../../components/SectionContainer";
 
 import "./styles.css";
-import Title from "../../components/Title";
 import Button from "../../components/Button";
 import Footer from "../../components/Footer";
 import { Link } from "react-router-dom";
