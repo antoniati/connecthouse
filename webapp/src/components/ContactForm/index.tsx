@@ -98,7 +98,7 @@ const ContactForm: React.FC = () => {
                     <h3 className="talk-us-title">
                         ou Fale Conosco
                     </h3>
-                    <Link to="https://wa.me/5513981257704">
+                    <Link to="https://wa.me/5513981257704" target="_blank">
                         <Button
                             text="Whatsapp"
                             textColor="#FFF"
@@ -108,7 +108,7 @@ const ContactForm: React.FC = () => {
                             borderColor="#25D366"
                         />
                     </Link>
-                    <Link to="/about">
+                    <Link to="https://t.me/palmeiras" target="_blank">
                         <Button
                             text="Telegram"
                             textColor="#FFF"
