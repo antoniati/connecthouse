@@ -7,6 +7,9 @@ interface InputProps {
     
     textFor: string;
     textLabel: string;
+
+    valueMessage: string;
+    changeEvent: React.ChangeEventHandler<HTMLTextAreaElement>;
 }
 
 const InputForm: React.FC<InputProps> = ({
@@ -16,6 +19,8 @@ const InputForm: React.FC<InputProps> = ({
     
     textFor,
     textLabel,
+    valueMessage,
+    changeEvent
 }) => {
     return (
         <div className="input-container" style={{width: "100%"}}>
@@ -36,6 +41,8 @@ const InputForm: React.FC<InputProps> = ({
                 className={classTextArea}
                 name={nameTextArea}
                 placeholder={textPlaceholder}
+                onChange={changeEvent}
+                value={valueMessage}
                 style={{
                     width: "100%",
                     height: "120px",

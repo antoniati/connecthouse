@@ -8,6 +8,7 @@ type ButtonProps = {
   hoverText?: string; 
   borderColor?: string; 
   clickFunction?: React.MouseEventHandler<HTMLButtonElement>;
+  typeButton?: "button" | "submit" | "reset";
 };
 
 const Button: React.FC<ButtonProps> = ({ 
@@ -17,6 +18,7 @@ const Button: React.FC<ButtonProps> = ({
   borderColor, 
   textColor, 
   hoverText,
+  typeButton,
   clickFunction 
 }) => {
 
@@ -31,6 +33,7 @@ const Button: React.FC<ButtonProps> = ({
       onClick={clickFunction}
       onMouseEnter={handleMouseEnter} 
       onMouseLeave={handleMouseLeave}  
+      type={typeButton}
       style={{ 
         width: '275px', 
         height: '60px', 

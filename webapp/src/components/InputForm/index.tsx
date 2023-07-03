@@ -8,6 +8,10 @@ interface InputProps {
     
     textFor: string;
     textLabel: string;
+
+    valueInput: string;
+    changeEvent: React.ChangeEventHandler<HTMLInputElement>;
+    
 }
 
 const InputForm: React.FC<InputProps> = ({
@@ -18,6 +22,9 @@ const InputForm: React.FC<InputProps> = ({
     
     textFor,
     textLabel,
+
+    valueInput,
+    changeEvent
 }) => {
     return (
         <div 
@@ -46,6 +53,8 @@ const InputForm: React.FC<InputProps> = ({
                 type={typeInput}
                 name={nameInput}
                 placeholder={textPlaceholder}
+                onChange={changeEvent}
+                value={valueInput}
                 style={{
                     width: "100%",
                     padding: "0.6rem",
