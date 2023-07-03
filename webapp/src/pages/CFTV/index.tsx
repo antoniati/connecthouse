@@ -8,7 +8,7 @@ import Button from "../../components/Button";
 import Footer from "../../components/Footer";
 import { Link } from "react-router-dom";
 
-const About: React.FC = () => {
+const ProjectCFTV: React.FC = () => {
     return (
         <>
             <Navbar />
@@ -16,7 +16,7 @@ const About: React.FC = () => {
             <SectionContainer id="project-container">
                 <div className="project-item">
                     <div className="slider-project-item">
-                        <img src="https://connecthouse.vercel.app/images/image-one.png" alt="" />
+                        <img src="https://connecthouse.vercel.app/images/image-eight.png" alt="" />
                     </div>
                     <div className="text-intro-item">
                         <h2 className="subtitle-project-item">
@@ -93,15 +93,18 @@ const About: React.FC = () => {
                     </div>
                 </div>
                 <div className="btn-project-info">
-                    <Button
-                        text="Entre em Contato"
-                        textColor="#FA9428"
-                        fillColor="#141821"
-                        borderColor="#FA9428"
-                        hoverText="white"
-                        hoverColor="#FAA64C"
-                    />
-                        <Link to="https://wa.me/5519989288560" target="_blank">
+                    <Link to="https://connecthouse.vercel.app/contato">
+                        <Button
+                            text="Entre em Contato"
+                            textColor="#FA9428"
+                            fillColor="#141821"
+                            borderColor="#FA9428"
+                            hoverText="white"
+                            hoverColor="#FAA64C"
+                        />
+
+                    </Link>
+                    <Link to="https://wa.me/5519989288560" target="_blank">
                         <Button
                             text="Whatsapp"
                             textColor="#FFF"
@@ -128,4 +131,4 @@ const About: React.FC = () => {
     );
 }
 
-export default About;
+export default ProjectCFTV;

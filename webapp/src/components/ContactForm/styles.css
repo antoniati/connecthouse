@@ -46,6 +46,8 @@
   grid-area: talk-us;
 }
 
+
+
 @media(max-width: 987px) {
   .contact-content {
     width: 95%;
