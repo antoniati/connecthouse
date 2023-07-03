@@ -98,7 +98,7 @@ const ContactForm: React.FC = () => {
                     <h3 className="talk-us-title">
                         ou Fale Conosco
                     </h3>
-                    <Link to="/about">
+                    <Link to="https://wa.me/5513981257704">
                         <Button
                             text="Whatsapp"
                             textColor="#FFF"
