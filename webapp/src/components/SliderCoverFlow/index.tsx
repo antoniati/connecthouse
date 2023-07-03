@@ -24,7 +24,7 @@ const SliderCoverFlow: React.FC = () => {
             coverflowEffect={{
                 rotate: 0,
                 stretch: 0,
-                depth: 263,
+                depth: 100,
                 modifier: 2.5
             }}
             modules={[EffectCoverflow, Pagination, Navigation]}
