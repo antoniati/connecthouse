@@ -19,7 +19,7 @@ const MapLeaflet: React.FC = () => {
                     style={{
                         border: "2px solid var(--main-color)",
                         borderRadius: "10px",
-                        margin: "5px 0 5px 0",
+                        marginTop: "10px",
                     }}
                     loading="lazy"
                 ></iframe>

@@ -17,6 +17,7 @@ import SectionContainer from "../../components/SectionContainer";
 import SliderCoverFlow from "../../components/SliderCoverFlow";
 import ContactForm from "../../components/ContactForm";
 import Footer from "../../components/Footer";
+import { Link } from "react-router-dom";
 
 
 const Landing: React.FC = () => {
@@ -79,13 +80,13 @@ const Landing: React.FC = () => {
                 <Description descriptionText={heroDescription} />
                 <div className="hero-buttons">
                     <Button
-                        text="Saiba Mais"
+                        text="Projetos"
                         textColor="#FFF"
                         fillColor="#FA9428"
                         borderColor="#FA9428"
                         hoverText="white"
                         hoverColor="#FAA64C"
-                        clickFunction={() => scrollToSection(aboutSectionRef)}
+                        clickFunction={() => scrollToSection(projectsSectionRef)}
                     />
                     <Button
                         text="Entre em Contato"
@@ -130,15 +131,16 @@ const Landing: React.FC = () => {
                         </p>
 
                         <div className="about-buttons">
-                            <Button
-                                clickFunction={() => scrollToSection(contactSectionRef)}
-                                text="Entre em Contato"
-                                textColor="#FA9428"
-                                fillColor="#141821"
-                                hoverColor="#FAA64C"
-                                hoverText="white"
-                                borderColor="#FA9428"
-                            />
+                            <Link to="https://connecthouse.vercel.app/sobre">
+                                <Button
+                                    text="Saiba Mais"
+                                    textColor="#FFF"
+                                    fillColor="#FA9428"
+                                    borderColor="#FA9428"
+                                    hoverText="white"
+                                    hoverColor="#FAA64C"
+                                />
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -156,7 +158,7 @@ const Landing: React.FC = () => {
                 <ContactForm />
             </SectionContainer>
 
-           <Footer />
+            <Footer />
         </div>
     );
 }

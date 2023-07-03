@@ -38,22 +38,22 @@ const Navbar: React.FC = () => {
                 <ul className="main-nav-list">
                     <Link to="https://connecthouse.vercel.app/sobre">
                         <li className="main-nav-item">
-                            <a className="main-nav-link">Sobre</a>
+                            <span className="main-nav-link">Sobre</span>
                         </li>
                     </Link>
                     <Link to="https://connecthouse.vercel.app/servicos">
                         <li className="main-nav-item">
-                            <a className="main-nav-link">Serviços</a>
+                            <span className="main-nav-link">Serviços</span>
                         </li>
                     </Link>
                     <Link to="https://connecthouse.vercel.app/projetos">
                         <li className="main-nav-item">
-                            <a className="main-nav-link">Projetos</a>
+                            <span className="main-nav-link">Projetos</span>
                         </li>
                     </Link>
                     <Link to="https://connecthouse.vercel.app/contato">
                         <li className="main-nav-item">
-                            <a className="main-nav-link">Contato</a>
+                            <span className="main-nav-link">Contato</span>
                         </li>
                     </Link>
                 </ul>
@@ -69,47 +69,47 @@ const Navbar: React.FC = () => {
                 <ul className="drop-down-nav-list">
                     <Link to="https://connecthouse.vercel.app/sobre">
                         <li className="drop-down-nav-item">
-                            <a
+                            <span
                                 className="drop-down-nav-link"
                                 data-text="Sobre"
                                 onClick={openMenuToggle}
                             >
                                 Sobre
-                            </a>
+                            </span>
                         </li>
                     </Link>
                     <Link to="https://connecthouse.vercel.app/servicos">
                         <li className="drop-down-nav-item">
-                            <a
+                            <span
                                 className="drop-down-nav-link"
                                 data-text="Serviços"
                                 onClick={openMenuToggle}
                             >
                                 Serviços
-                            </a>
+                            </span>
                         </li>
                     </Link>
                     <Link to="https://connecthouse.vercel.app/projetos">
                         <li className="drop-down-nav-item">
-                            <a
+                            <span
                                 className="drop-down-nav-link"
                                 data-text="Projetos"
                                 onClick={openMenuToggle}
                             >
                                 Projetos
-                            </a>
+                            </span>
                         </li>
                     </Link>
                     <Link to="https://connecthouse.vercel.app/contato">
 
                         <li className="drop-down-nav-item">
-                            <a
+                            <span
                                 className="drop-down-nav-link"
                                 data-text="Contato"
                                 onClick={openMenuToggle}
                             >
                                 Contato
-                            </a>
+                            </span>
                         </li>
                     </Link>
                 </ul>
