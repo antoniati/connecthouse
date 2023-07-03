@@ -2,7 +2,7 @@ import React, { ReactNode } from "react";
 
 interface SectionContainerProps {
     id: string;
-    refElement: React.RefObject<HTMLDivElement>;
+    refElement?: React.RefObject<HTMLDivElement>;
     children: ReactNode;
 };
 

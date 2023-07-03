@@ -16,8 +16,8 @@ import Description from "../../components/Description";
 import SectionContainer from "../../components/SectionContainer";
 import SliderCoverFlow from "../../components/SliderCoverFlow";
 import ContactForm from "../../components/ContactForm";
+import Footer from "../../components/Footer";
 
-import logoImage from "../../assets/logo-svg.svg";
 
 const Landing: React.FC = () => {
     // Estado Inicial dos Títulos da página Landing
@@ -156,17 +156,7 @@ const Landing: React.FC = () => {
                 <ContactForm />
             </SectionContainer>
 
-            <div className="footer-container">
-                <footer className="footer">
-                    <p className="footer-text">
-                        &copy; 2023 Connect House.
-                        <span>
-                            Todos os direitos reservados.
-                        </span>
-                    </p>
-                    <img src={logoImage} alt="Logo do Programador Felipe Antoniati" />
-                </footer>
-            </div>
+           <Footer />
         </div>
     );
 }
