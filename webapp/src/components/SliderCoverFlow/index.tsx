@@ -36,7 +36,7 @@ const SliderCoverFlow: React.FC = () => {
         >
             {projectsData.projects.map((project, index) => (
                 <SwiperSlide className="slider-item-coverflow" key={index}>
-                    <a href="http://localhost:5173/projeto-cftv">
+                    <a href="http://connecthouse.vercel.app/projeto-cftv">
                         <p className="slider-item-description">Clique para Visualizar</p>
                     </a>
                     <img src={project.image} alt="image" />
