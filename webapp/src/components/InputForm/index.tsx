@@ -40,9 +40,8 @@ const InputForm: React.FC<InputProps> = ({
                     fontSize: "14px",
                     width: "100%",
                     display: "block",
-                    fontWeight: "bold",
-                    marginLeft: "5px",
-                    marginBottom: "5px",
+                    fontWeight: "600",
+                    margin: "0",
                 }}
             >
                 {textLabel}

@@ -27,11 +27,11 @@ const InputForm: React.FC<InputProps> = ({
             <label 
                 htmlFor={textFor} 
                 style={{
+                    fontSize: "14px",
                     width: "100%",
                     display: "block",
-                    fontWeight: "bold",
-                    marginLeft: "5px",
-                    marginBottom: "5px",
+                    fontWeight: "600",
+                    marginTop: "5px"
                 }}
                 >
                 {textLabel}

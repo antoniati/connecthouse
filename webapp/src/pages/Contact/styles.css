@@ -1,6 +1,6 @@
 #contato-page {
     background-color: var(--white-color);
-    padding-top: 7rem !important;
+    padding-top: 6.5rem !important;
 }
 
 #contato-page {
@@ -8,13 +8,9 @@
     margin: 0;
 }
 
-#contato-page .contact-form button {
-    color: var(--main-color) !important;
-    background-color: var(--dark-color) !important;
-}
 #contato-page .contact-form {
     background-color: #fcfcfc;
-    border: 1px solid var(--main-color);
+    border: 2px solid #e0e0e0;
 }
 
 #contato-page .footer-container {
@@ -22,6 +18,11 @@
 }
 #contato-page footer {
     border: 0;
+}
+
+#contato-page .talk-us {
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
 }
 
 @media screen and (max-width: 500px){

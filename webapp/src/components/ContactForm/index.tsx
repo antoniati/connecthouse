@@ -42,6 +42,7 @@ const ContactForm: React.FC = () => {
         <section id="contact-container">
             <div className="contact-content">
                 <form className="contact-form" onSubmit={handleSendEmail}>
+                <h3>Envie uma Mensagem :</h3>
                     <InputForm
                         // Classe e Conteúdo
                         classInput="input-name"
@@ -86,8 +87,8 @@ const ContactForm: React.FC = () => {
                     />
                     <Button
                         text="Enviar"
-                        textColor="#FFF"
-                        fillColor="#FA9428"
+                        textColor="#FA9428"
+                        fillColor="#141428"
                         hoverColor="#FAA64C"
                         hoverText="white"
                         borderColor="#FA9428"
