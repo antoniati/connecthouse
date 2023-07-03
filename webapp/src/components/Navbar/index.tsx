@@ -36,6 +36,11 @@ const Navbar: React.FC = () => {
                 />
 
                 <ul className="main-nav-list">
+                    <Link to="https://connecthouse.vercel.app">
+                        <li className="main-nav-item">
+                            <span className="main-nav-link">Inicio</span>
+                        </li> 
+                    </Link>
                     <Link to="https://connecthouse.vercel.app/sobre">
                         <li className="main-nav-item">
                             <span className="main-nav-link">Sobre</span>
@@ -67,6 +72,17 @@ const Navbar: React.FC = () => {
             {/* DROP DOWN MENU */}
             <nav id={dropDown}>
                 <ul className="drop-down-nav-list">
+                    <Link to="https://connecthouse.vercel.app">
+                        <li className="drop-down-nav-item">
+                            <span
+                                className="drop-down-nav-link"
+                                data-text="Sobre"
+                                onClick={openMenuToggle}
+                            >
+                                Inicio
+                            </span>
+                        </li>
+                    </Link>
                     <Link to="https://connecthouse.vercel.app/sobre">
                         <li className="drop-down-nav-item">
                             <span
