@@ -16,10 +16,10 @@ const AppRoutes: React.FC = () => {
         <Router>
             <Routes>
                 <Route path="/" element={<Landig />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/Services" element={<Services />} />
-                <Route path="/Projects" element={<Projects />} />
-                <Route path="/Contact" element={<Contact />} />
+                <Route path="/sobre" element={<About />} />
+                <Route path="/servicos" element={<Services />} />
+                <Route path="/projetos" element={<Projects />} />
+                <Route path="/contato" element={<Contact />} />
             </Routes>
         </Router>
     )

@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect, useRef } from "react";
 
 import landingData from "../../static/data/landing-data.json";
 
@@ -36,8 +35,15 @@ const Landing: React.FC = () => {
     const [projectsDescription, setProjectsDescription] = useState("");
     const [contactDescription, setContactDescription] = useState("");
 
+    // Referências de cada seção da Página
+    const heroSectionRef = useRef<HTMLDivElement>(null);
+    const servicesSectionRef = useRef<HTMLDivElement>(null);
+    const aboutSectionRef = useRef<HTMLDivElement>(null);
+    const projectsSectionRef = useRef<HTMLDivElement>(null);
+    const contactSectionRef = useRef<HTMLDivElement>(null);
+
     useEffect(() => {
-        // 
+        // Requisição dos dados
         const { sectionsData } = landingData;
 
         // Atualiza Títulos da página Landing
@@ -55,49 +61,51 @@ const Landing: React.FC = () => {
         setContactDescription(sectionsData[4].description ?? "");
     }, []);
 
+    const scrollToSection = (ref: React.RefObject<HTMLDivElement>) => {
+        if (ref.current) {
+            window.scrollTo({
+                top: ref.current.offsetTop,
+                behavior: "smooth"
+            });
+        }
+    };
+
     return (
         <div id="landing">
             <Navbar />
 
-            <SectionContainer id="hero-section">
-                <div className="hero-texts">
-                    <h1 className="hero-title">
-                        {heroTitle}
-                    </h1>
-                    <Description descriptionText={heroDescription} />
-                </div>
-
+            <SectionContainer id="hero-section" refElement={heroSectionRef}>
+                <h1 className="hero-title">{heroTitle}</h1>
+                <Description descriptionText={heroDescription} />
                 <div className="hero-buttons">
-                    <Link to="/about">
-                        <Button
-                            text="Saiba Mais"
-                            textColor="#FFF"
-                            fillColor="#FA9428"
-                            hoverColor="#FAA64C"
-                            hoverText="white"
-                            borderColor="#FA9428"
-                        />
-                    </Link>
-                    <Link to="#contact">
-                        <Button
-                            text="Entre em Contato"
-                            textColor="#FA9428"
-                            fillColor="#141821"
-                            hoverColor="#FAA64C"
-                            hoverText="white"
-                            borderColor="#FA9428"
-                        />
-                    </Link>
+                    <Button
+                        text="Saiba Mais"
+                        textColor="#FFF"
+                        fillColor="#FA9428"
+                        borderColor="#FA9428"
+                        hoverText="white"
+                        hoverColor="#FAA64C"
+                        clickFunction={() => scrollToSection(aboutSectionRef)}
+                    />
+                    <Button
+                        text="Entre em Contato"
+                        textColor="#FA9428"
+                        fillColor="#141821"
+                        borderColor="#FA9428"
+                        hoverText="white"
+                        hoverColor="#FAA64C"
+                        clickFunction={() => scrollToSection(contactSectionRef)}
+                    />
                 </div>
             </SectionContainer>
 
-            <SectionContainer id="services-section">
+            <SectionContainer id="services-section" refElement={servicesSectionRef}>
                 <Title overlay={servicesTitle} text={servicesTitle} />
                 <Description descriptionText={servicesDescription} />
                 <Slider />
             </SectionContainer>
 
-            <SectionContainer id="about-section">
+            <SectionContainer id="about-section" refElement={aboutSectionRef}>
                 <div className="about-content">
                     <div className="about-content-left">
                         <img
@@ -122,32 +130,32 @@ const Landing: React.FC = () => {
                         </p>
 
                         <div className="about-buttons">
-                            <Link to="http://localhost:5173/about">
-                                <Button
-                                    text="Saiba Mais"
-                                    textColor="white"
-                                    fillColor="#FA9428"
-                                    hoverColor="#FAA64C"
-                                    hoverText="white"
-                                    borderColor="#FA9428"
-                                />
-                            </Link>
+                            <Button
+                                clickFunction={() => scrollToSection(contactSectionRef)}
+                                text="Entre em Contato"
+                                textColor="#FA9428"
+                                fillColor="#141821"
+                                hoverColor="#FAA64C"
+                                hoverText="white"
+                                borderColor="#FA9428"
+                            />
                         </div>
                     </div>
                 </div>
             </SectionContainer>
 
-            <SectionContainer id="projects-section">
+            <SectionContainer id="projects-section" refElement={projectsSectionRef}>
                 <Title overlay={projectsTitle} text={projectsTitle} />
                 <Description descriptionText={projectsDescription} />
                 <SliderCoverFlow />
             </SectionContainer>
 
-            <SectionContainer id="contact-section">
+            <SectionContainer id="contact-section" refElement={contactSectionRef}>
                 <Title overlay={contactTitle} text={contactTitle} />
                 <Description descriptionText={contactDescription} />
                 <ContactForm />
             </SectionContainer>
+
             <div className="footer-container">
                 <footer className="footer">
                     <p className="footer-text">

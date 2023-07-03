@@ -20,10 +20,17 @@ const InputForm: React.FC<InputProps> = ({
     textLabel,
 }) => {
     return (
-        <div className="input-container" style={{width: "100%"}}>
+        <div 
+            className="input-container" 
+            style={{
+                width: "100%", 
+                height: "auto"
+            }}
+        >
             <label 
                 htmlFor={textFor} 
                 style={{
+                    fontSize: "14px",
                     width: "100%",
                     display: "block",
                     fontWeight: "bold",
@@ -41,7 +48,7 @@ const InputForm: React.FC<InputProps> = ({
                 placeholder={textPlaceholder}
                 style={{
                     width: "100%",
-                    padding: "1rem",
+                    padding: "0.6rem",
                     border: "1px solid #d3d3d3",
                     borderRadius: "5px",
                 }}

@@ -12,7 +12,6 @@ const ContactForm: React.FC = () => {
         <section id="contact-container">
             <div className="contact-content">
                 <form className="contact-form">
-                    <h3>Envie uma mensagem</h3>
                     <InputForm
                         classInput="input-name"
                         typeInput="text"
@@ -44,19 +43,18 @@ const ContactForm: React.FC = () => {
                         textFor="input-textarea"
                         textLabel="Mensagem::"
                     />
-                                            <Button 
-                            text="Enviar" 
-                            textColor="#FFF" 
-                            fillColor="#141428" 
-                            hoverColor="#00CEE0" 
-                            hoverText="white" 
-                            borderColor="#00BBCC" 
+                        <Button
+                            text="Enviar"
+                            textColor="#FFF"
+                            fillColor="#FA9428"
+                            hoverColor="#FAA64C"
+                            hoverText="white"
+                            borderColor="#FA9428"
                         />
                 </form>
-                <MapLeaflet />
                 <div className="talk-us">
                     <h3 className="talk-us-title">
-                       Fale Conosco 
+                       ou Fale Conosco 
                     </h3>
                     <Link to="/about">
                         <Button 
@@ -79,6 +77,7 @@ const ContactForm: React.FC = () => {
                         />
                     </Link>
                 </div>
+                <MapLeaflet />
             </div>
         </section>
     )

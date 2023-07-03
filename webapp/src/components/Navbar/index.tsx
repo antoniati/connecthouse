@@ -4,7 +4,6 @@ import { useState } from "react";
 import LogoImage from "../../assets/logo.svg";
 
 import "./styles.css";
-import { Link } from "react-router-dom";
 
 const Navbar: React.FC = () => {
     const [menuToggle, setMenuToggle] = useState("menu-toggle")
@@ -33,24 +32,16 @@ const Navbar: React.FC = () => {
 
                 <ul className="main-nav-list">
                     <li className="main-nav-item">
-                        <Link to="http://localhost:5173/about">
-                            <a className="main-nav-link">Sobre</a>
-                        </Link>
+                            <a href="#about-section" className="main-nav-link">Sobre</a>
                     </li>
                     <li className="main-nav-item">
-                        <Link to="#services">
-                            <a className="main-nav-link">Serviços</a>
-                        </Link>
+                            <a href="#services-section" className="main-nav-link">Serviços</a>
                     </li>
                     <li className="main-nav-item">
-                        <Link to="#projects">
-                            <a className="main-nav-link">Projetos</a>
-                        </Link>
+                            <a href="#projects-section" className="main-nav-link">Projetos</a>
                     </li>
                     <li className="main-nav-item">
-                        <Link to="#contact">
-                            <a className="main-nav-link">Contato</a>
-                        </Link>
+                            <a href="#contact-section" className="main-nav-link">Contato</a>
                     </li>
                 </ul>
 
@@ -61,24 +52,44 @@ const Navbar: React.FC = () => {
             <nav id={dropDown}>
                 <ul className="drop-down-nav-list">
                     <li className="drop-down-nav-item">
-                        <Link to="http://localhost:5173/about">
-                            <a className="drop-down-nav-link" data-text="Sobre" href="#about" > Sobre </a>
-                        </Link>
+                            <a 
+                                href="#about-section" 
+                                className="drop-down-nav-link" 
+                                data-text="Sobre"
+                                onClick={openMenuToggle} 
+                            > 
+                                    Sobre 
+                            </a>
                     </li>
                     <li className="drop-down-nav-item">
-                        <Link to="http://localhost:5173/services">
-                            <a className="drop-down-nav-link" data-text="Serviços" href="#services" > Serviços </a>
-                        </Link>
+                            <a 
+                                href="#services-section" 
+                                className="drop-down-nav-link" 
+                                data-text="Serviços" 
+                                onClick={openMenuToggle} 
+                            > 
+                                Serviços 
+                            </a>
                     </li>
                     <li className="drop-down-nav-item">
-                        <Link to="http://localhost:5173/projects">
-                            <a className="drop-down-nav-link" data-text="Projetos" href="#projects" > Projetos </a>
-                        </Link>
+                            <a 
+                                href="#projects-section" 
+                                className="drop-down-nav-link" 
+                                data-text="Projetos"  
+                                onClick={openMenuToggle} 
+                            > 
+                                Projetos 
+                            </a>
                     </li>
                     <li className="drop-down-nav-item">
-                        <Link to="http://localhost:5173/contact">
-                            <a className="drop-down-nav-link" data-text="Contato" href="#contact" > Contato </a>
-                        </Link>
+                            <a 
+                                href="#contact-section" 
+                                className="drop-down-nav-link" 
+                                data-text="Contato" 
+                                onClick={openMenuToggle} 
+                            > 
+                                Contato 
+                            </a>
                     </li>
                 </ul>
             </nav>

@@ -9,7 +9,7 @@ const Description: React.FC<DescriptionProps> = ({descriptionText}) => {
         className="description-text"
         style={{
             width: "95%",
-            maxWidth: "968px",
+            maxWidth: "1200px",
             fontSize: "30px",
             fontWeight: 400,
             lineHeight: "2.56rem",
