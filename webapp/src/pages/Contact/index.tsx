@@ -1,11 +1,20 @@
 import React from "react";
 
 import "./styles.css";
+import SectionContainer from "../../components/SectionContainer";
+import Footer from "../../components/Footer";
+import Navbar from "../../components/Navbar";
 
-const About: React.FC = () => {
-    return(
-        <h1>About</h1>
+const Contato: React.FC = () => {
+    return (
+        <>
+            <Navbar />
+            <SectionContainer id="contato-page">
+                <h1>Contato</h1>
+            </SectionContainer>
+            <Footer />
+        </>
     );
 }
 
-export default About;
+export default Contato;

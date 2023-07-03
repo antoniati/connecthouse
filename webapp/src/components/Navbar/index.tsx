@@ -39,7 +39,7 @@ const Navbar: React.FC = () => {
                     <Link to="https://connecthouse.vercel.app/sobre">
                         <li className="main-nav-item">
                             <span className="main-nav-link">Sobre</span>
-                        </li>
+                        </li> 
                     </Link>
                     <Link to="https://connecthouse.vercel.app/servicos">
                         <li className="main-nav-item">
