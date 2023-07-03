@@ -18,6 +18,8 @@ import SectionContainer from "../../components/SectionContainer";
 import SliderCoverFlow from "../../components/SliderCoverFlow";
 import ContactForm from "../../components/ContactForm";
 
+import logoImage from "../../assets/logo-svg.svg";
+
 const Landing: React.FC = () => {
     // Estado Inicial dos Títulos da página Landing
     const [heroTitle, setHeroTitle] = useState("");
@@ -26,7 +28,7 @@ const Landing: React.FC = () => {
     const [projectsTitle, setProjectsTitle] = useState("");
     const [contactTitle, setContactTitle] = useState("");
 
-    
+
     // Estado Inicial das Descrições da página Landing
     const [heroDescription, setHeroDescription] = useState("");
     const [servicesDescription, setServicesDescription] = useState("");
@@ -36,7 +38,7 @@ const Landing: React.FC = () => {
 
     useEffect(() => {
         // 
-        const {sectionsData} = landingData;
+        const { sectionsData } = landingData;
 
         // Atualiza Títulos da página Landing
         setHeroTitle(sectionsData[0].title ?? "");
@@ -59,31 +61,31 @@ const Landing: React.FC = () => {
 
             <SectionContainer id="hero-section">
                 <div className="hero-texts">
-                    <h1 className="hero-title"> 
-                        {heroTitle} 
+                    <h1 className="hero-title">
+                        {heroTitle}
                     </h1>
-                    <Description descriptionText={heroDescription}/>
+                    <Description descriptionText={heroDescription} />
                 </div>
 
                 <div className="hero-buttons">
                     <Link to="/about">
-                        <Button 
-                            text="Saiba Mais" 
-                            textColor="#FFF" 
-                            fillColor="#FA9428" 
-                            hoverColor="#FAA64C" 
-                            hoverText="white" 
-                            borderColor="#FA9428" 
+                        <Button
+                            text="Saiba Mais"
+                            textColor="#FFF"
+                            fillColor="#FA9428"
+                            hoverColor="#FAA64C"
+                            hoverText="white"
+                            borderColor="#FA9428"
                         />
                     </Link>
                     <Link to="#contact">
-                        <Button 
+                        <Button
                             text="Entre em Contato"
-                             textColor="#FA9428" 
-                             fillColor="#141821" 
-                             hoverColor="#FAA64C" 
-                             hoverText="white" 
-                             borderColor="#FA9428" 
+                            textColor="#FA9428"
+                            fillColor="#141821"
+                            hoverColor="#FAA64C"
+                            hoverText="white"
+                            borderColor="#FA9428"
                         />
                     </Link>
                 </div>
@@ -91,22 +93,22 @@ const Landing: React.FC = () => {
 
             <SectionContainer id="services-section">
                 <Title overlay={servicesTitle} text={servicesTitle} />
-                <Description descriptionText={servicesDescription}/>
+                <Description descriptionText={servicesDescription} />
                 <Slider />
             </SectionContainer>
 
             <SectionContainer id="about-section">
                 <div className="about-content">
                     <div className="about-content-left">
-                        <img 
-                            className="internalwork-image" 
-                            src={internalWorkImage} 
-                            alt="Pequeno Grande Homem" 
+                        <img
+                            className="internalwork-image"
+                            src={internalWorkImage}
+                            alt="Pequeno Grande Homem"
                         />
-                        <img 
-                            className="externalwork-image" 
-                            src={externalWorkImage} 
-                            alt="Pequeno Grande Homem" 
+                        <img
+                            className="externalwork-image"
+                            src={externalWorkImage}
+                            alt="Pequeno Grande Homem"
                         />
                     </div>
 
@@ -118,34 +120,45 @@ const Landing: React.FC = () => {
                         <p className="about-description">
                             {aboutDescription}
                         </p>
-                        
+
                         <div className="about-buttons">
                             <Link to="http://localhost:5173/about">
-                                <Button 
-                                    text="Saiba Mais" 
-                                    textColor="white" 
-                                    fillColor="#FA9428" 
-                                    hoverColor="#FAA64C" 
-                                    hoverText="white" 
-                                    borderColor="#FA9428" 
+                                <Button
+                                    text="Saiba Mais"
+                                    textColor="white"
+                                    fillColor="#FA9428"
+                                    hoverColor="#FAA64C"
+                                    hoverText="white"
+                                    borderColor="#FA9428"
                                 />
                             </Link>
                         </div>
                     </div>
                 </div>
             </SectionContainer>
-            
+
             <SectionContainer id="projects-section">
-                <Title overlay={projectsTitle} text={projectsTitle}/>
-                 <Description descriptionText={projectsDescription}/>
-            <SliderCoverFlow />
+                <Title overlay={projectsTitle} text={projectsTitle} />
+                <Description descriptionText={projectsDescription} />
+                <SliderCoverFlow />
             </SectionContainer>
 
             <SectionContainer id="contact-section">
-                <Title overlay={contactTitle} text={contactTitle}/>
+                <Title overlay={contactTitle} text={contactTitle} />
                 <Description descriptionText={contactDescription} />
                 <ContactForm />
             </SectionContainer>
+            <div className="footer-container">
+                <footer className="footer">
+                    <p className="footer-text">
+                        &copy; 2023 Connect House.
+                        <span>
+                            Todos os direitos reservados.
+                        </span>
+                    </p>
+                    <img src={logoImage} alt="Logo do Programador Felipe Antoniati" />
+                </footer>
+            </div>
         </div>
     );
 }

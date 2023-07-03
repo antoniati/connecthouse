@@ -44,6 +44,14 @@ const ContactForm: React.FC = () => {
                         textFor="input-textarea"
                         textLabel="Mensagem::"
                     />
+                                            <Button 
+                            text="Enviar" 
+                            textColor="#FFF" 
+                            fillColor="#141428" 
+                            hoverColor="#00CEE0" 
+                            hoverText="white" 
+                            borderColor="#00BBCC" 
+                        />
                 </form>
                 <MapLeaflet />
                 <div className="talk-us">
