@@ -8,7 +8,6 @@ import Button from "../../components/Button";
 
 import internalWorkImage from "../../assets/internal-work.png"
 import externalWorkImage from "../../assets/external-work.png"
-import imageTeste from "../../assets/image 5.png"
 
 import "./styles.css";
 
