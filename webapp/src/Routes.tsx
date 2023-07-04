@@ -8,9 +8,12 @@ import {
 import Landig from "./pages/Landing";
 import About from "./pages/About";
 import Services from "./pages/Services";
-import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
+
+// Projects Pages
+import Projects from "./pages/Projects";
 import ProjectCFTV from "./pages/Projects/ProjectCFTV";
+import LightingProject from "./pages/Projects/LigthingProjetct";
 
 const AppRoutes: React.FC = () => {
     return(
@@ -22,6 +25,7 @@ const AppRoutes: React.FC = () => {
                 <Route path="/contato" element={<Contact />} />
                 <Route path="/projetos" element={<Projects />} />
                 <Route path="/projetos/projeto-cftv" element={<ProjectCFTV />} />
+                <Route path="/projetos/projeto-iluminacao" element={<LightingProject />} />
             </Routes>
         </Router>
     )

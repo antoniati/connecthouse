@@ -1,160 +1,262 @@
-#project-container {
+#project-page {
   background-color: var(--white-color);
 }
 
-.project-item {
+/* Container do Conteúdo do projeto */
+.project-content {
+  width: 100%;
+  height: auto;
+  max-width: 1300px;
+  padding: 20px;
+
   display: flex;
   flex-direction: column;
-  width: 95%;
-  max-width: 1300px;
-  height: auto;
+  gap: 20px;
+
   color: var(--dark-color);
   border-top: 2px solid var(--dark-color);
-  padding: 20px;
-  gap: 20px;
 }
 
-.project-item img {
+/* Imagem do projeto no Topo da página */
+.project-content-image_top {
   width: 100%;
-  height: 350px;
-  border-radius: 10px;
+  height: 300px;
+}
+
+.project-content-image_top img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  border-radius: 10px;
 }
 
-.text-intro-project {
+/* Sessão de Introdução ao projeto*/
+.project-content-introdution_item {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
 }
 
-.info-project {
+.project-content-introdution_title {
+  font-size: 26px;
+}
+
+.project-content-introdution_description {
+  font-size: 18px;
+  line-height: 2rem;
+}
+
+
+/* Sessão de Detalhes de conclusão */
+.project-content-details_item {
   display: flex;
 }
 
-.info-project-item {
+.project-content-details_texts {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.info-project-title {
+  height: auto;
   border: 1px solid #e3e3e3;
+}
+
+.project-content-details_title {
   font-size: 16px;
-  width: 100%;
+  font-weight: 500;
   padding: 5px;
-  background-color: #f2f2f2;
+  background-color: #f4f4f4;
+  border: 1px solid #e3e3e3;
 }
 
-.info-project-description {
-  border: 1px solid #e3e3e3;
+.project-content-details_description {
   font-size: 16px;
-  width: 100%;
   padding: 10px;
 }
 
-.details-strategy {
+/* Sessão de Análise do trabalho */
+
+.project-content-analytics_item {
   width: 100%;
   display: flex;
   gap: 20px;
 }
 
-.details-solution-texts,
-.details-strategy-texts {
+.project-content-analytics_texts {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 10px;
+  margin-top: 1.6rem;
 }
 
-.details-strategy-images {
+.project-content-introdution_title {
+  font-size: 26px;
+}
+
+.project-content-analytics_description {
+  font-size: 18px;
+  line-height: 2rem;
+}
+
+.project-content-analytics_images {
   width: 50%;
   display: flex;
   gap: 20px;
+  margin-top: 4rem;
   position: relative;
 }
 
-.details-strategy-images img {
+.project-content-analytics_images img {
   width: 300px;
   height: 200px;
+  border-radius: 10px;
 }
 
-.details-solution {
+
+.project-content-solutions_item {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  margin-top: 1.6rem;
 }
 
-.details-solution-images{
+.project-content-solutions_images{
   width: 100%;
   overflow-x: auto;
   display: flex;
   gap: 20px;
 }
 
-.details-solution-images img {
+.project-content-solutions_images img {
   width: 300px;
   height: 300px;
+  border-radius: 10px;
 }
 
-.details-solution-images img:hover {
+.project-content-solutions_images img:hover {
   cursor: grab;
 }
 
-.btn-project-info {
+.project-content-solutions_texts {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 1.6rem;
+}
+
+.project-content-solutions_title {
+  font-size: 26px;
+}
+
+.project-content-solutions_description {
+  font-size: 18px;
+  line-height: 2rem;
+}
+
+/* Sessão sobre a conclusão do projeto */
+.project-content-conclusion_item {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.project-content-conclusion_title {
+  font-size: 26px;
+  margin-top: 1rem;
+}
+.project-content-conclusion_description {
+  font-size: 18px;
+  line-height: 2rem;
+}
+
+
+/* Sessão sobre a conclusão do projeto */
+.project-content-contact-us_item {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.project-content-contact-us_title {
+  font-size: 26px;
+  margin-top: 1rem;
+}
+.project-content-contact-us_description {
+  font-size: 18px;
+  line-height: 2rem;
+}
+
+.project-content-contact-us_links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 4rem;
+  padding: 40px;
 }
-
-#project-container .footer-container {
-  margin-top: 2rem;
-  background-color: var(--white-color) !important;
-  border-top: 1px solid #e0e0e0;
-}
-
-#project-container footer {
-  border: 0;
-}
-
-#project-container footer p {
-  color: var(--dark-color);
-}
-
-
 
 @media screen and (max-width: 1000px) {
-  .details-strategy {
-    flex-direction: column;
-  }
-
-  .details-strategy-images {
-    width: 100%;
-  }
-
-  .details-strategy-images img {
-    width: 100%;
+  .project-content-analytics_item {
+      flex-direction: column;
   }
   
+  .project-content-analytics_images {
+      width: 100%;
+      margin: 0;
+  }
+  
+  .project-content-analytics_images img {
+      width: 100%;
+  }
+  .project-content-solutions_texts,
+  .project-content-analytics_texts {
+      margin-top: 1rem;
+  }
+
 }
 
 @media screen and (max-width: 600px) {
-  .info-project {
-    display: block;
+  .project-content-details_item {
+      flex-direction: column;
   }
 
-  .details-strategy-images {
-    flex-direction: column;
+  .project-content-analytics_images {
+      flex-direction: column;
   }
-  .details-strategy-images img:first-child {
-    display: none;
+
+  .project-content-analytics_images img:first-child {
+      display: none;
   }
 }
 
-@media (max-width: 385px) {
-  .project-item img {
-    height: 200px;
+@media screen and (max-width: 500px) {
+  .project-content-contact-us_title,
+  .project-content-solutions_title,
+  .project-content-conclusion_title,
+  .project-content-analytics_title,
+  .project-content-introdution_title {
+      font-size: 22px;
+  }
+
+}
+
+@media screen and (max-width: 400px) {
+  .project-content-contact-us_title,
+  .project-content-solutions_title,
+  .project-content-conclusion_title,
+  .project-content-analytics_title,
+  .project-content-introdution_title {
+      text-align: center;
+  }
+
+
+  .project-content-contact-us_description,
+  .project-content-solutions_description,
+  .project-content-conclusion_description,
+  .project-content-analytics_description,
+  .project-content-introdution_description {
+      font-size: 16px;
+      text-align: center;
+      line-height: 1.8rem;
   }
 }
