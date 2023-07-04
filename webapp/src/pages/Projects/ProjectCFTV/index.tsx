@@ -53,7 +53,6 @@ const ProjectCFTV: React.FC = () => {
                             </div>
                             <div className="details-strategy-images">
                                 <img src="https://connecthouse.vercel.app/static/images/services/cftv/cftv-image-four.png" alt="" />
-                                {/* <img src="https://connecthouse.vercel.app/static/images/services/cftv/cftv-image-six.png" alt="" /> */}
                             </div>
                         </div>
                         <h2>
