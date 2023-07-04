@@ -125,7 +125,7 @@ const ProjectCFTV: React.FC = () => {
                         />
                     </Link>
                 </div>
-                <Footer />
+                <Footer logo="https://connecthouse.vercel.app/logodark.svg"/>
             </SectionContainer>
         </>
     );

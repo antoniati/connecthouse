@@ -1,8 +1,10 @@
-import logoImage from "../../assets/logo-svg.svg";
+interface FooterProps {
+    logo: string;
+}
 
 import "./styles.css"
 
-const Footer: React.FC = () => {
+const Footer: React.FC<FooterProps> = ({logo}) => {
     return(
         <div className="footer-container">
         <footer className="footer">
@@ -12,7 +14,7 @@ const Footer: React.FC = () => {
                     Todos os direitos reservados.
                 </span>
             </p>
-            <img src={logoImage} alt="Logo do Programador Felipe Antoniati" />
+            <img src={logo} alt="Logo da Empresa Connect House" />
         </footer>
     </div>
     )
