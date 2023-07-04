@@ -15,10 +15,8 @@ const ProjectCFTV: React.FC = () => {
             <div id="#top-page"></div>
             <SectionContainer id="project-container">
                 <div className="project-item">
-                    <div className="slider-project-item">
-                        <img src="https://connecthouse.vercel.app/images/image-eight.png" alt="" />
-                    </div>
-                    <div className="text-intro-item">
+                    <img src="https://connecthouse.vercel.app/static/images/services/cftv/cftv-image-three.png" alt="" />
+                    <div className="text-intro-project">
                         <h2 className="subtitle-project-item">
                             Instalação de Sistemas de CFTV
                         </h2>
@@ -29,11 +27,11 @@ const ProjectCFTV: React.FC = () => {
                     <div className="info-project">
                         <div className="info-project-item">
                             <h3 className="info-project-title">Local :</h3>
-                            <p className="info-project-description">Riviera de São Lourenço, Bertioga-SP</p>
+                            <p className="info-project-description">Royal Plaza IN, Campinas-SP</p>
                         </div>
                         <div className="info-project-item">
                             <h3 className="info-project-title">Data :</h3>
-                            <p className="info-project-description">24/24/2024</p>
+                            <p className="info-project-description">01/04/2023</p>
                         </div>
                         <div className="info-project-item">
                             <h3 className="info-project-title">Tempo de execução :</h3>
@@ -42,15 +40,22 @@ const ProjectCFTV: React.FC = () => {
                     </div>
 
                     <div className="texts-details-project">
-
-                        <h2>
-                            Análise Estratégica
-                        </h2>
-
-                        <p>
-                            Antes de iniciar a instalação do sistema de CFTV, nossa equipe de especialistas conduziu uma análise minuciosa das instalações do cliente. Com base nessa avaliação criteriosa, identificamos os pontos críticos que requeriam monitoramento constante e desenvolvemos uma estratégia personalizada para maximizar a segurança.
-
-                        </p>
+                        <div className="details-strategy">
+                            <div className="details-strategy-texts">
+                            <h2> Análise Estratégica</h2>
+                            <p>
+                                Antes de iniciar a instalação do sistema de CFTV, nossa equipe de especialistas conduziu uma análise minuciosa das instalações do cliente. 
+                            </p>
+                                <p>
+                                Com base nessa avaliação criteriosa, identificamos os pontos críticos que requeriam monitoramento constante e desenvolvemos uma estratégia personalizada para maximizar a segurança.
+                                
+                                </p>
+                            </div>
+                            <div className="details-strategy-images">
+                                <img src="https://connecthouse.vercel.app/static/images/services/cftv/cftv-image-four.png" alt="" />
+                                {/* <img src="https://connecthouse.vercel.app/static/images/services/cftv/cftv-image-six.png" alt="" /> */}
+                            </div>
+                        </div>
                         <h2>
                             Solução Personalizada
                         </h2>
