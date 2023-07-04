@@ -1,11 +1,11 @@
 import React from "react";
 
-import Navbar from "../../components/Navbar";
-import SectionContainer from "../../components/SectionContainer";
+import Navbar from "../../../components/Navbar";
+import SectionContainer from "../../../components/SectionContainer";
 
 import "./styles.css";
-import Button from "../../components/Button";
-import Footer from "../../components/Footer";
+import Button from "../../../components/Button";
+import Footer from "../../../components/Footer";
 import { Link } from "react-router-dom";
 
 const ProjectCFTV: React.FC = () => {
