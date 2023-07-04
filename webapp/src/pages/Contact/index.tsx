@@ -13,7 +13,7 @@ const Contato: React.FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("https://connecthouse.vercel.app/static/data/landing-data.json");
+        const response = await fetch("https://connecthouse.vercel.app/static/data/landing.json");
         const data = await response.json();
   
         setContactDescription(data.sectionsData[4].description ?? "");
