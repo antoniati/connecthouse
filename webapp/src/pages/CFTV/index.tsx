@@ -27,18 +27,18 @@ const ProjectCFTV: React.FC = () => {
                         </p>
                     </div>
                     <div className="info-project">
-                        <table className="info-project-item">
-                            <tr>
-                                <td>Local:</td>
-                                <td>Data:</td>
-                                <td>Tempo de execução:</td>
-                            </tr>
-                            <tr>
-                                <td>Riviera de São Lourenço, Bertioga-SP</td>
-                                <td>24/24/2024</td>
-                                <td>3 Meses</td>
-                            </tr>
-                        </table>
+                        <div className="info-project-item">
+                            <h3 className="info-project-title">Local :</h3>
+                            <p className="info-project-description">Riviera de São Lourenço, Bertioga-SP</p>
+                        </div>
+                        <div className="info-project-item">
+                            <h3 className="info-project-title">Data :</h3>
+                            <p className="info-project-description">24/24/2024</p>
+                        </div>
+                        <div className="info-project-item">
+                            <h3 className="info-project-title">Tempo de execução :</h3>
+                            <p className="info-project-description">3 Meses</p>
+                        </div>
                     </div>
 
                     <div className="texts-details-project">
@@ -125,7 +125,7 @@ const ProjectCFTV: React.FC = () => {
                         />
                     </Link>
                 </div>
-                <Footer logo="https://connecthouse.vercel.app/logodark.svg"/>
+                <Footer logo="https://connecthouse.vercel.app/logodark.svg" />
             </SectionContainer>
         </>
     );
