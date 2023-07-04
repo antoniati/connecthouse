@@ -9,7 +9,7 @@
 
 .slider-item-coverflow {
   width: 37rem;
-  height: 425px;
+  height: 500px;
   position: relative;
   display: flex;
   align-items: center;
@@ -57,7 +57,21 @@
   width: 50%;
 }
 
+
 @media screen and (max-width: 600px){
+  .slider-item-coverflow {
+    width: 20rem;
+    height: 380px;
+  }
+
+  .slider-item-description{
+    font-size: 10px !important;
+  }
+
+  .map-container h3 {
+    text-align: center;
+  }
+
   .slider-arrow {
     display: none;
   }
