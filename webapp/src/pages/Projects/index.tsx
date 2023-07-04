@@ -11,8 +11,8 @@ const Project: React.FC = () => {
             <Navbar />
             <SectionContainer id="project-page">
                 <h1>Project</h1>
+                <Footer logo="https://connecthouse.vercel.app/logodark.svg"/>
             </SectionContainer>
-            <Footer />
         </>
     );
 }
