@@ -11,7 +11,7 @@
             rgba(20, 24, 33, 0.6) 100%,
             rgba(20, 24, 33, 0.8) 80%,
             var(--dark-color) 100%),
-        url("../../assets/background-img.jpg") center;
+        url("https://connecthouse.vercel.app/static/images/background.jpg") center;
     background-size: cover;
 }
 
