@@ -3,17 +3,23 @@ import SectionContainer from "../../components/SectionContainer";
 import Footer from "../../components/Footer";
 import Navbar from "../../components/Navbar";
 
-import "./styles.css";
 import { Link } from "react-router-dom";
 import Button from "../../components/Button";
+
+import internalWorkImage from "../../assets/internal-work.png"
+import externalWorkImage from "../../assets/external-work.png"
+import imageTeste from "../../assets/image 5.png"
+
+import "./styles.css";
 
 const About: React.FC = () => {
     return (
         <>
             <Navbar />
             <SectionContainer id="about-page">
-                <section className="section">
                 <h1 className="title">Transforme sua Casa em um Ambiente Conectado, Seguro e Inteligente</h1>
+                <section className="section section-about">
+                    <div className="about-page-section-texts">
                     <h2 className="section-title">Quem Somos</h2>
                     <p className="section-description">
                         Bem-vindo à Connect House, a empresa líder em automação residencial e predial.
@@ -28,15 +34,35 @@ const About: React.FC = () => {
                         estamos comprometidos em oferecer soluções de automação excepcionais que superam suas expectativas.
                         Sua satisfação é a nossa prioridade.
                     </p>
+                    </div>
+                    <div className="about-images">
+                        <img
+                            className="internalwork-image-about"
+                            src={internalWorkImage}
+                            alt="Pequeno Grande Homem"
+                        />
+                        <img
+                            className="externalwork-image-about"
+                            src={externalWorkImage}
+                            alt="Pequeno Grande Homem"
+                        />
+                    </div>
                 </section>
                 <section className="section">
                     <h2 className="section-title">Nossa Experiência</h2>
                     <p className="section-description">
-                        Ao longo dos anos, concluímos com sucesso mais de 50 projetos, atendendo às necessidades de
-                        residências e empresas de diferentes portes. Nossa equipe altamente qualificada e experiente
-                        possui conhecimentos técnicos avançados e está comprometida em oferecer soluções de automação
-                        de alta qualidade.
-                    </p>
+        Ao longo dos anos, concluímos com sucesso mais de 50 projetos, atendendo às necessidades de
+        residências e empresas de diferentes portes. Nossa equipe altamente qualificada e experiente
+        possui conhecimentos técnicos avançados e está comprometida em oferecer soluções de automação
+        de alta qualidade.
+    </p>
+    <p className="section-description">
+        Além disso, na nossa jornada, desenvolvemos parcerias sólidas com as principais marcas do setor,
+        garantindo o acesso aos mais inovadores e confiáveis produtos de automação disponíveis no mercado.
+        Essa expertise nos permite personalizar cada projeto para atender de forma única e eficiente às
+        necessidades específicas dos nossos clientes, sempre priorizando a qualidade, eficiência e satisfação
+        em cada etapa do processo.
+    </p>
                 </section>
                 <section className="section">
                     <h2 className="section-title">Nossos Serviços</h2>
