@@ -10,7 +10,7 @@ const Services: React.FC = () => {
         <>
             <Navbar />
             <SectionContainer id="services-page">
-                <h1>Services</h1>
+                <h1>Serviços</h1>
                 <Footer logo="https://connecthouse.vercel.app/logodark.svg"/>
             </SectionContainer>
         </>
