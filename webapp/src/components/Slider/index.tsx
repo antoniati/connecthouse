@@ -21,7 +21,7 @@ const Slider: React.FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("https://connecthouse.vercel.app/static/data/services-data.json");
+        const response = await fetch("https://connecthouse.vercel.app/static/data/services.json");
         const data = await response.json();
   
         setServicesData(data);
