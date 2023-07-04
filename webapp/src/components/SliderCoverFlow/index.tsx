@@ -68,10 +68,10 @@ const SliderCoverFlow: React.FC = () => {
             ))}
             <div className="slider-controler">
                 <div className="swiper-button-prev slider-arrow">
-                    <img src="https://connecthouse.vercel.app/icons/arrrow-left.svg" alt="Seta Para esquerda" />
+                    <img src="https://connecthouse.vercel.app/static/images/icons/arrrow-left.svg" alt="Seta Para esquerda" />
                 </div>
                 <div className="swiper-button-next slider-arrow">
-                    <img src="https://connecthouse.vercel.app/icons/arrow-rigth.svg" alt="Seta para direita" />
+                    <img src="https://connecthouse.vercel.app/static/images/icons/arrow-rigth.svg" alt="Seta para direita" />
                 </div>
                 <div className="swiper-pagination pagination-projects"></div>
             </div>
