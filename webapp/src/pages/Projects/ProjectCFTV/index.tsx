@@ -11,9 +11,9 @@ import { Link } from "react-router-dom";
 const ProjectCFTV: React.FC = () => {
     return (
         <>
-            <Navbar />
             <div id="#top-page"></div>
             <SectionContainer id="project-container">
+            <Navbar />
                 <div className="project-item">
                     <img src="https://connecthouse.vercel.app/static/images/services/cftv/cftv-image-three.png" alt="" />
                     <div className="text-intro-project">
@@ -53,14 +53,23 @@ const ProjectCFTV: React.FC = () => {
                             </div>
                             <div className="details-strategy-images">
                                 <img src="https://connecthouse.vercel.app/static/images/services/cftv/cftv-image-four.png" alt="" />
+                                <img src="https://connecthouse.vercel.app/static/images/services/cftv/cftv-image-six.png" alt="" />
                             </div>
                         </div>
-                        <h2>
-                            Solução Personalizada
-                        </h2>
-                        <p>
-                            Nossa equipe projetou um sistema de CFTV sob medida, levando em consideração os requisitos específicos do cliente. Utilizando equipamentos de ponta e câmeras de alta resolução, montamos um conjunto de câmeras estrategicamente posicionadas em locais-chave, como entradas, corredores e áreas com alto fluxo de pessoas. Combinando câmeras fixas e PTZ, garantimos uma cobertura abrangente e flexível.
-                        </p>
+                        <div className="details-solution">
+                            <div className="details-solution-texts">
+                                <h2>Solução Personalizada</h2>
+                                <p>
+                                    Nossa equipe projetou um sistema de CFTV sob medida, levando em consideração os requisitos específicos do cliente. Utilizando equipamentos de ponta e câmeras de alta resolução, montamos um conjunto de câmeras estrategicamente posicionadas em locais-chave, como entradas, corredores e áreas com alto fluxo de pessoas. Combinando câmeras fixas e PTZ, garantimos uma cobertura abrangente e flexível.
+                                </p>
+                            </div>
+                            <div className="details-solution-images">
+                                <img src="https://connecthouse.vercel.app/static/images/services/cftv/cftv-image-five.png" alt="" />
+                                 <img src="https://connecthouse.vercel.app/static/images/services/cftv/cftv-image-one.png" alt="" />
+                                <img src="https://connecthouse.vercel.app/static/images/services/cftv/cftv-image-two.png" alt="" />
+                                <img src="https://connecthouse.vercel.app/static/images/services/cftv/cftv-image-three.png" alt="" />
+                            </div>
+                        </div>
 
                         <h2>
                             Integração de Tecnologia Avançada
