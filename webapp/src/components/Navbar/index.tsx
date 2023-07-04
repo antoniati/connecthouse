@@ -29,22 +29,24 @@ const Navbar: React.FC = () => {
     return (
         <>
             <nav id="navbar">
-                <img
-                    className="logo"
-                    alt="Logo Connect House"
-                    src={LogoImage}
-                />
+                <Link to="https://connecthouse.vercel.app">
+                    <img
+                        className="logo"
+                        alt="Logo Connect House"
+                        src={LogoImage}
+                    />
+                </Link>
 
                 <ul className="main-nav-list">
                     <Link to="https://connecthouse.vercel.app">
                         <li className="main-nav-item">
                             <span className="main-nav-link">Inicio</span>
-                        </li> 
+                        </li>
                     </Link>
                     <Link to="https://connecthouse.vercel.app/sobre">
                         <li className="main-nav-item">
                             <span className="main-nav-link">Sobre</span>
-                        </li> 
+                        </li>
                     </Link>
                     <Link to="https://connecthouse.vercel.app/servicos">
                         <li className="main-nav-item">
