@@ -1,32 +1,32 @@
 {
     "services": [
         {
-            "image":"https://connecthouse.vercel.app/static/static/icons/home.svg",
+            "image":"https://connecthouse.vercel.app/static/images/icons/home.svg",
             "title": "Automação Residencial e Predial",
             "description": "Torne sua casa ou prédio mais inteligente e eficiente com nossa solução de automação"
         },
         {
-            "image":"https://connecthouse.vercel.app/static/icons/network.svg",
+            "image":"https://connecthouse.vercel.app/static/images/icons/network.svg",
             "title": "Cabeamento de Rede",
             "description": "Garanta uma infraestrutura de rede robusta e confiável para sua empresa"
         },
         {
-            "image":"https://connecthouse.vercel.app/static/icons/server.svg",
+            "image":"https://connecthouse.vercel.app/static/images/icons/server.svg",
             "title": "Montagem de Racks de TI",
             "description": "Organize e otimize sua infraestrutura de TI com a montagem profissional de racks"
         },
         {
-            "image":"https://connecthouse.vercel.app/static/icons/cam.svg",
+            "image":"https://connecthouse.vercel.app/static/images/icons/cam.svg",
             "title": "Montagem de Racks CFTV",
             "description": "Proteja seu patrimônio com nosso serviço de montagem de racks para sistemas de CFTV"
         },
         {
-            "image":"https://connecthouse.vercel.app/static/icons/optical-fiber.svg",
+            "image":"https://connecthouse.vercel.app/static/images/icons/optical-fiber.svg",
             "title": "Cabeamento de Fibra Ótica",
             "description": "Tenha uma conexão de internet ultrarrápida e estável com o nosso serviço de cabeamento de fibra ótica"
         },
         {
-            "image":"https://connecthouse.vercel.app/static/icons/link.svg",
+            "image":"https://connecthouse.vercel.app/static/images/icons/link.svg",
             "title": "Fusão da Fibra Ótica",
             "description": "Conte com nossa expertise para obter uma conexão de dados eficiente e confiável"
         }
