@@ -102,7 +102,7 @@ const About: React.FC = () => {
                         para obter mais informações ou agendar uma consulta. Estamos ansiosos para trabalhar com você e
                         tornar sua visão de automação uma realidade.
                     </p>
-                    <div className="btn-project-info">
+                    <div className="btn-about-info">
                     <Link to="https://connecthouse.vercel.app/contato">
                         <Button
                             text="Entre em Contato"

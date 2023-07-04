@@ -158,7 +158,7 @@ const Landing: React.FC = () => {
                 <ContactForm />
             </SectionContainer>
 
-            <Footer logo="https://connecthouse.vercel.app/logodark.svg"/>
+            <Footer logo="https://connecthouse.vercel.app/logowhite.svg"/>
         </div>
     );
 }
