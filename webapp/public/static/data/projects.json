@@ -1,0 +1,31 @@
+{
+    "projects": [
+        {
+            "image": "https://connecthouse.vercel.app/images/image-one.png"
+        },
+        {
+            "image": "https://connecthouse.vercel.app/images/image-two.png"
+        },
+        {
+            "image": "https://connecthouse.vercel.app/images/image-three.png"
+        },
+        {
+            "image": "https://connecthouse.vercel.app/images/image-four.png"
+        },
+        {
+            "image": "https://connecthouse.vercel.app/images/image-five.png"
+        },
+        {
+            "image": "https://connecthouse.vercel.app/images/image-six.png"
+        },
+        {
+            "image": "https://connecthouse.vercel.app/images/image-seven.png"
+        },
+        {
+            "image": "https://connecthouse.vercel.app/images/image-eight.png"
+        },
+        {
+            "image": "https://connecthouse.vercel.app/images/image-nine.png"
+        }
+    ]
+}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow, Pagination, Navigation } from "swiper";
@@ -8,11 +8,35 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-import projectsData from "../../static/data/projects-data.json";
+interface Project {
+    image: string;
+}
+
+interface ProjectsData {
+    projects: Project[];
+  }
 
 import "./styles.css"
 
 const SliderCoverFlow: React.FC = () => {
+    const [projectsData, setProjectsData] = useState<ProjectsData>({ projects: [] });
+
+    useEffect(() => {
+        const fetchData = async () => {
+          try {
+            const response = await fetch("https://connecthouse.vercel.app/static/data/projects.json");
+            const data = await response.json();
+      
+            setProjectsData(data);
+          } catch (error) {
+            console.error("Error fetching projects data:", error);
+          }
+        };
+      
+        fetchData();
+      }, []);
+      
+
     return (
         <Swiper
             className="slider_container"

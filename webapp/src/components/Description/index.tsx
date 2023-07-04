@@ -4,8 +4,8 @@ interface DescriptionProps {
     descriptionText: string;
 }
 
-const Description: React.FC<DescriptionProps> = ({descriptionText}) => {
-    return <p 
+const Description: React.FC<DescriptionProps> = ({ descriptionText }) => {
+    return <p
         className="description-text"
         style={{
             width: "95%",
@@ -17,7 +17,7 @@ const Description: React.FC<DescriptionProps> = ({descriptionText}) => {
             letterSpacing: "2px",
         }}
     >
-        {descriptionText}    
+        {descriptionText}
     </p>
 }
 

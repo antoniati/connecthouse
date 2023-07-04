@@ -1,7 +1,6 @@
 import React from "react";
 
 import { useState } from "react";
-import LogoImage from "../../assets/logo.svg";
 
 import "./styles.css";
 import { Link } from "react-router-dom";
@@ -33,7 +32,7 @@ const Navbar: React.FC = () => {
                     <img
                         className="logo"
                         alt="Logo Connect House"
-                        src={LogoImage}
+                        src="https://connecthouse.vercel.app/static/images/logo/logowhite.svg"
                     />
                 </Link>
 

@@ -6,9 +6,6 @@ import Navbar from "../../components/Navbar";
 import { Link } from "react-router-dom";
 import Button from "../../components/Button";
 
-import internalWorkImage from "../../assets/internal-work.png"
-import externalWorkImage from "../../assets/external-work.png"
-
 import "./styles.css";
 
 const About: React.FC = () => {
@@ -37,12 +34,12 @@ const About: React.FC = () => {
                     <div className="about-images">
                         <img
                             className="internalwork-image-about"
-                            src={internalWorkImage}
+                            src="https://connecthouse.vercel.app/static/images/services/internal-work.png"
                             alt="Pequeno Grande Homem"
                         />
                         <img
                             className="externalwork-image-about"
-                            src={externalWorkImage}
+                            src="https://connecthouse.vercel.app/static/images/services/external-work.png"
                             alt="Pequeno Grande Homem"
                         />
                     </div>

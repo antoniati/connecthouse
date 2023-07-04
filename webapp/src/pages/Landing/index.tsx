@@ -1,24 +1,18 @@
 import React, { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 
-import landingData from "../../static/data/landing-data.json";
 
 import Navbar from "../../components/Navbar";
 import Title from "../../components/Title";
+import Description from "../../components/Description";
 import Button from "../../components/Button";
 import Slider from "../../components/Slider";
-
-import internalWorkImage from "../../assets/internal-work.png";
-import externalWorkImage from "../../assets/external-work.png";
-
+import SliderCoverFlow from "../../components/SliderCoverFlow";
+import SectionContainer from "../../components/SectionContainer";
+import Footer from "../../components/Footer";
+import ContactForm from "../../components/ContactForm";
 
 import "./styles.css";
-import Description from "../../components/Description";
-import SectionContainer from "../../components/SectionContainer";
-import SliderCoverFlow from "../../components/SliderCoverFlow";
-import ContactForm from "../../components/ContactForm";
-import Footer from "../../components/Footer";
-import { Link } from "react-router-dom";
-
 
 const Landing: React.FC = () => {
     // Estado Inicial dos Títulos da página Landing
@@ -44,23 +38,32 @@ const Landing: React.FC = () => {
     const contactSectionRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
-        // Requisição dos dados
-        const { sectionsData } = landingData;
-
-        // Atualiza Títulos da página Landing
-        setHeroTitle(sectionsData[0].title ?? "");
-        setServicesTitle(sectionsData[1].title ?? "");
-        setProjectsTitle(sectionsData[2].title ?? "");
-        setAboutTitle(sectionsData[3].title ?? "");
-        setContactTitle(sectionsData[4].title ?? "");
-
-        // Atualiza Descrições da página Landing
-        setHeroDescription(sectionsData[0].description ?? "");
-        setServicesDescription(sectionsData[1].description ?? "");
-        setProjectsDescription(sectionsData[2].description ?? "");
-        setAboutDescription(sectionsData[3].description ?? "");
-        setContactDescription(sectionsData[4].description ?? "");
-    }, []);
+        const fetchData = async () => {
+          try {
+            const response = await fetch("https://connecthouse.vercel.app/static/data/landing.json");
+            const data = await response.json();
+      
+            const { sectionsData } = data;
+      
+            setHeroTitle(sectionsData[0].title ?? "");
+            setServicesTitle(sectionsData[1].title ?? "");
+            setProjectsTitle(sectionsData[2].title ?? "");
+            setAboutTitle(sectionsData[3].title ?? "");
+            setContactTitle(sectionsData[4].title ?? "");
+      
+            setHeroDescription(sectionsData[0].description ?? "");
+            setServicesDescription(sectionsData[1].description ?? "");
+            setProjectsDescription(sectionsData[2].description ?? "");
+            setAboutDescription(sectionsData[3].description ?? "");
+            setContactDescription(sectionsData[4].description ?? "");
+          } catch (error) {
+            console.error("Error fetching landing data:", error);
+          }
+        };
+      
+        fetchData();
+      }, []);
+      
 
     const scrollToSection = (ref: React.RefObject<HTMLDivElement>) => {
         if (ref.current) {
@@ -111,12 +114,12 @@ const Landing: React.FC = () => {
                     <div className="about-content-left">
                         <img
                             className="internalwork-image"
-                            src={internalWorkImage}
+                            src="https://connecthouse.vercel.app/static/images/services/internal-work.png"
                             alt="Pequeno Grande Homem"
                         />
                         <img
                             className="externalwork-image"
-                            src={externalWorkImage}
+                            src="https://connecthouse.vercel.app/static/images/services/external-work.png"
                             alt="Pequeno Grande Homem"
                         />
                     </div>

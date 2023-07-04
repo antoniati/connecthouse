@@ -5,7 +5,7 @@ import emailjs from "@emailjs/browser";
 import InputForm from "../InputForm";
 import TextareaForm from "../TextareaForm";
 import Button from "../Button";
-import MapLeaflet from "../MapLeaflet";
+import MapGoogle from "../MapGoogle";
 
 import "./styles.css";
 
@@ -44,14 +44,12 @@ const ContactForm: React.FC = () => {
                 <form className="contact-form" onSubmit={handleSendEmail}>
                 <h3>Envie uma Mensagem :</h3>
                     <InputForm
-                        // Classe e Conteúdo
                         classInput="input-name"
                         typeInput="text"
                         nameInput="name"
                         textPlaceholder="Jhon"
                         textFor="input-name"
                         textLabel="Seu Nome ou Nome da Empresa:"
-                        // Funcionalidades
                         valueInput={name}
                         changeEvent={(e) => { setName(e.target.value) }}
 
@@ -120,7 +118,8 @@ const ContactForm: React.FC = () => {
                         />
                     </Link>
                 </div>
-                <MapLeaflet />
+
+                <MapGoogle />
             </div>
         </section>
     )
