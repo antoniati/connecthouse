@@ -1,13 +1,29 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import Navbar from "../../../components/Navbar";
-import SectionContainer from "../../../components/SectionContainer";
+import Button from "../../../components/Button";
 import Footer from "../../../components/Footer";
+import SectionContainer from "../../../components/SectionContainer";
 
 import "./styles.css";
-import Button from "../../../components/Button";
 
 const LightingProject: React.FC = () => {
+    const imageOpen = (image: HTMLImageElement) => {
+        image.classList.toggle("modal-open");
+    };
+
+    useEffect(() => {
+        const images = document.querySelectorAll(".project-content-solutions_images img");
+
+        images.forEach((image) => {
+            const htmlImage = image as HTMLImageElement;
+            image.addEventListener("click", () => {
+                imageOpen(htmlImage);
+            });
+        });
+    }, []);
+
+
     return (
         <>
             <Navbar />
@@ -126,7 +142,7 @@ const LightingProject: React.FC = () => {
                         <p className="project-content-contact-us_description">
                             Se você está procurando uma instalação profissional de sistemas de CFTV que atenda às suas necessidades específicas, entre em contato conosco hoje mesmo. Nossa equipe especializada está pronta para discutir suas demandas e fornecer a melhor solução de segurança para o seu negócio.
                         </p>
-                       
+
                         <div className="project-content-contact-us_links">
                             <a href="https://connecthouse.vercel.app/contato">
                                 <Button
@@ -160,10 +176,9 @@ const LightingProject: React.FC = () => {
                                 />
                             </a>
                         </div>
-
                     </div>
                 </div>
-            <Footer logo="https://connecthouse.vercel.app/static/images/logo/logowhite.svg" />
+                <Footer logo="https://connecthouse.vercel.app/static/images/logo/logowhite.svg" />
             </SectionContainer>
         </>
     )

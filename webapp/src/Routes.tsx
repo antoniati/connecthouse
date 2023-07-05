@@ -11,8 +11,6 @@ import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 
 // Projects Pages
-import Projects from "./pages/Projects";
-import ProjectCFTV from "./pages/Projects/ProjectCFTV";
 import LightingProject from "./pages/Projects/LigthingProjetct";
 
 const AppRoutes: React.FC = () => {
@@ -23,8 +21,8 @@ const AppRoutes: React.FC = () => {
                 <Route path="/sobre" element={<About />} />
                 <Route path="/servicos" element={<Services />} />
                 <Route path="/contato" element={<Contact />} />
-                <Route path="/projetos" element={<Projects />} />
-                <Route path="/projetos/projeto-cftv" element={<ProjectCFTV />} />
+                {/* <Route path="/projetos" element={<Projects />} />
+                <Route path="/projetos/projeto-cftv" element={<ProjectCFTV />} /> */}
                 <Route path="/projetos/projeto-iluminacao" element={<LightingProject />} />
             </Routes>
         </Router>
