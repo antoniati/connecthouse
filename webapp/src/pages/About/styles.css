@@ -1,4 +1,3 @@
-/* Estilos da Página SOBRE */
 #about-page {
     display: flex;
     align-items: center;
@@ -7,7 +6,6 @@
     color: var(--dark-color);
 }
 
-/* Título e Descrição Cabeçalho */
 .about-page-title {
     font-size: 26px;
     font-weight: 600;
@@ -18,7 +16,6 @@
     font-weight: 500;
 }
 
-/* Container das Sessões  */
 .about-page-item {
     width: 95%;
     max-width: 1200px;
@@ -49,7 +46,6 @@
     border: 1px solid #e3e3e3;
 }
 
-/* Textos */
 .about-page-texts {
     width: 100%;
     max-width: 1200px;
@@ -113,8 +109,6 @@
     padding: 10px;
 }
 
-
-/* Imagens */
 .about-page-images {
     width: 50%;
     display: flex;
@@ -139,15 +133,11 @@
     right: 0;
 }
 
-/* Estilos Responsivos Desktop */
 @media screen and (max-width: 1205px) {
-
-    /* Sessão */
     .about-page-item.section-who {
         flex-direction: column;
     }
 
-    /* Textos */
     .about-page-texts {
         justify-content: center;
         text-align: center;
@@ -159,7 +149,6 @@
         text-align: center;
     }
 
-    /* Imagens */
     .about-page-images {
         width: 100%;
         display: flex;
@@ -181,9 +170,7 @@
     }
 }
 
-/* Estilos Responsivos Tablet */
 @media screen and (max-width: 768px) {
-    /* Textos */
     #about-page {
         text-align: center;
     }
@@ -198,9 +185,7 @@
     }
 }
 
-/* Estilos Responsivos Mobile */
 @media screen and (max-width: 511px) {
-    /* Textos */
     .about-page-title,
     .about-page-description {
         font-size: 22px;

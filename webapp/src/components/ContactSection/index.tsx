@@ -1,48 +1,56 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import emailjs from "@emailjs/browser";
 
-import InputForm from "../InputForm";
-import TextareaForm from "../TextareaForm";
-import Button from "../Button";
-import MapGoogle from "../MapGoogle";
+import Form from "../../components/Form";
+import TalkUs from "../../components/TalkUs";
+import MapGoogle from "../../components/MapGoogle";
+
+import InputForm from "../../components/InputForm";
+import TextareaForm from "../../components/TextareaForm";
+import Button from "../../components/Button";
 
 import "./styles.css";
 
-const ContactForm: React.FC = () => {
-
-    const [name, setName] = useState("")
-    const [email, setEmail] = useState("")
-    const [whatsapp, setWhatsapp] = useState("")
-    const [message, setMessage] = useState("")
+const ContactButtons: React.FC = () => {
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [whatsapp, setWhatsapp] = useState("");
+    const [message, setMessage] = useState("");
 
     function handleSendEmail(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
+
         if (!name || !email || !whatsapp || !message) {
             alert("Preencha todos os campos do formulario antes de Enviar.")
             return;
-        }
+        };
+
         const templateParams = {
             from_name: name,
             email: email,
             whatsapp: whatsapp,
             message: message
-        }
+        };
+
         emailjs.send("service_m9vnf8c", "template_yz8sv5v", templateParams, "21x0pO6h91JgUktvO")
             .then((response) => {
                 setName("")
                 setEmail("")
                 setWhatsapp("")
                 setMessage("")
-                console.log("EMAIL ENVIADO", response.status, response.text)
-            })
-    }
-
+                console.log("EMAIL ENVIADO", response.status)
+            });
+    };
     return (
-        <section id="contact-container">
+        <div id="contact-section">
             <div className="contact-content">
-                <form className="contact-form" onSubmit={handleSendEmail}>
-                <h3>Envie uma Mensagem :</h3>
+
+
+                <Form
+                    id="contact-form"
+                    title="Envie uma Mensagem :"
+                    submit={handleSendEmail}
+                >
                     <InputForm
                         classInput="input-name"
                         typeInput="text"
@@ -54,6 +62,7 @@ const ContactForm: React.FC = () => {
                         changeEvent={(e) => { setName(e.target.value) }}
 
                     />
+
                     <InputForm
                         classInput="input-email"
                         typeInput="email"
@@ -64,6 +73,7 @@ const ContactForm: React.FC = () => {
                         valueInput={email}
                         changeEvent={(e) => { setEmail(e.target.value) }}
                     />
+
                     <InputForm
                         classInput="input-whatsapp"
                         typeInput="text"
@@ -74,6 +84,7 @@ const ContactForm: React.FC = () => {
                         valueInput={whatsapp}
                         changeEvent={(e) => { setWhatsapp(e.target.value) }}
                     />
+
                     <TextareaForm
                         classTextArea="input-textarea"
                         nameTextArea="story"
@@ -83,6 +94,7 @@ const ContactForm: React.FC = () => {
                         valueMessage={message}
                         changeEvent={(e) => { setMessage(e.target.value) }}
                     />
+
                     <Button
                         text="Enviar"
                         textColor="#FA9428"
@@ -92,12 +104,12 @@ const ContactForm: React.FC = () => {
                         borderColor="#FA9428"
                         typeButton="submit"
                     />
-                </form>
-                <div className="talk-us">
-                    <h3 className="talk-us-title">
-                        ou Fale Conosco
-                    </h3>
-                    <Link to="https://wa.me/5519989288560" target="_blank">
+                </Form>
+
+                <TalkUs
+                    id="talk-us"
+                >
+                    <a href="https://wa.me/5519989288560" target="_blank">
                         <Button
                             text="Whatsapp"
                             textColor="#FFF"
@@ -106,8 +118,9 @@ const ContactForm: React.FC = () => {
                             hoverText="white"
                             borderColor="#25D366"
                         />
-                    </Link>
-                    <Link to="https://t.me/palmeiras" target="_blank">
+                    </a>
+
+                    <a href="https://t.me/palmeiras" target="_blank">
                         <Button
                             text="Telegram"
                             textColor="#FFF"
@@ -116,13 +129,14 @@ const ContactForm: React.FC = () => {
                             hoverText="white"
                             borderColor="#00BBCC"
                         />
-                    </Link>
-                </div>
+                    </a>
+                </TalkUs>
 
-                <MapGoogle />
+                <MapGoogle id="map-google" />
             </div>
-        </section>
+        </div>
     )
 }
 
-export default ContactForm;
+export default ContactButtons;
+

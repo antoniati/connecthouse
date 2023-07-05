@@ -10,9 +10,9 @@ import Slider from "../../components/Slider";
 import SliderCoverFlow from "../../components/SliderCoverFlow";
 import SectionContainer from "../../components/SectionContainer";
 import Footer from "../../components/Footer";
-import ContactForm from "../../components/ContactForm";
 
 import "./styles.css";
+import ContactSection from "../../components/ContactSection";
 
 const Landing: React.FC = () => {
     // Estado Inicial dos Títulos da página Landing
@@ -158,7 +158,7 @@ const Landing: React.FC = () => {
             <SectionContainer id="contact-section" refElement={contactSectionRef}>
                 <Title overlay={contactTitle} text={contactTitle} />
                 <Description descriptionText={contactDescription} />
-                <ContactForm />
+                <ContactSection />
             </SectionContainer>
 
             <Footer logo="https://connecthouse.vercel.app/logowhite.svg"/>
