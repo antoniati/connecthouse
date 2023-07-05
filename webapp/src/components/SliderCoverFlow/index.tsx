@@ -10,6 +10,7 @@ import 'swiper/css/navigation';
 
 interface Project {
     image: string;
+    urlLink: string;
 }
 
 interface ProjectsData {
@@ -65,7 +66,7 @@ const SliderCoverFlow: React.FC = () => {
                 >
                     {projectsData.projects.map((project, index) => (
                         <SwiperSlide className="slider-item-coverflow" key={index}>
-                            <a href="http://connecthouse.vercel.app/projetos">
+                            <a href={project.urlLink}>
                                 <p className="slider-item-description">Clique para Visualizar</p>
                             </a>
                             <img src={project.image} alt="image" />

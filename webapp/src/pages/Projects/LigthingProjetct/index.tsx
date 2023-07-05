@@ -150,7 +150,7 @@ const LightingProject: React.FC = () => {
                         </p>
 
                         <div className="project-content-contact-us_links">
-                            <a href="https://connecthouse.vercel.app/contato">
+                            <a href="https://connecthouse.vercel.app/contato"> 
                                 <Button
                                     text="Entre em Contato"
                                     textColor="#FA9428"
