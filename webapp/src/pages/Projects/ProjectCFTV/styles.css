@@ -137,17 +137,6 @@
     cursor: zoom-out;
 }
 
-.project-content-contact-us_links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 40px;
-}
-
-
 @media screen and (max-width: 1000px) {
     .project-content-analytics_item {
         flex-direction: column;

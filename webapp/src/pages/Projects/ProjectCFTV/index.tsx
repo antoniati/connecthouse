@@ -6,6 +6,7 @@ import Footer from "../../../components/Footer";
 import SectionContainer from "../../../components/SectionContainer";
 
 import "./styles.css";
+import ContactButtons from "../../../components/ContactButtons";
 
 const LightingProject: React.FC = () => {
     const imageOpen = (image: HTMLImageElement) => {
@@ -135,48 +136,7 @@ const LightingProject: React.FC = () => {
                         </p>
                     </div>
 
-                    <div className="project-content-contact-us_item">
-                        <h2 className="project-content-contact-us_title">
-                            Contate-nos
-                        </h2>
-                        <p className="project-content-contact-us_description">
-                            Se você está procurando uma instalação profissional de sistemas de CFTV que atenda às suas necessidades específicas, entre em contato conosco hoje mesmo. Nossa equipe especializada está pronta para discutir suas demandas e fornecer a melhor solução de segurança para o seu negócio.
-                        </p>
-
-                        <div className="project-content-contact-us_links">
-                            <a href="https://connecthouse.vercel.app/contato">
-                                <Button
-                                    text="Entre em Contato"
-                                    textColor="#FA9428"
-                                    fillColor="#141821"
-                                    borderColor="#FA9428"
-                                    hoverText="white"
-                                    hoverColor="#FAA64C"
-                                />
-
-                            </a>
-                            <a href="https://wa.me/5519989288560" target="_blank">
-                                <Button
-                                    text="Whatsapp"
-                                    textColor="#FFF"
-                                    fillColor="#25D366"
-                                    hoverColor="#52E086"
-                                    hoverText="white"
-                                    borderColor="#25D366"
-                                />
-                            </a>
-                            <a href="https://t.me/palmeiras" target="_blank">
-                                <Button
-                                    text="Telegram"
-                                    textColor="#FFF"
-                                    fillColor="#00BBCC"
-                                    hoverColor="#00CEE0"
-                                    hoverText="white"
-                                    borderColor="#00BBCC"
-                                />
-                            </a>
-                        </div>
-                    </div>
+                    <ContactButtons />
                 </div>
                 <Footer logo="https://connecthouse.vercel.app/static/images/logo/logowhite.svg" />
             </SectionContainer>

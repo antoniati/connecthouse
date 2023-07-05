@@ -1,54 +1,83 @@
-/* styles.css */
+/* Estilos da Página SOBRE */
 #about-page {
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-color: #fbfbfb;
-    color: #141428;
+    background-color: var(--white-color);
+    color: var(--dark-color);
 }
 
-.section {
-    width: 95%;
-    max-width: 1200px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
-    gap: 20px;
+/* Título e Descrição Cabeçalho */
+.about-page-title {
+    font-size: 26px;
+    font-weight: 600;
 }
 
-.title {
-    font-size: 22px;
-    margin-top: 2rem;
-    text-align: center;
-}
-
-.section-title {
-    width: 100%;
-    font-size: 22px;
-    margin-top: 1.6rem;
-
-}
-
-.section-description {
-    font-size: 18px;
-}
-
-.service {
-    max-width: 1200px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
-    gap: 20px;
-    border: 1px solid #e3e3e3;
-}
-
-.service h3 {
+.about-page-description {
+    font-size: 26px;
     font-weight: 500;
 }
 
-.service-title {
+/* Container das Sessões  */
+.about-page-item {
+    width: 95%;
+    max-width: 1200px;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about-page-item.section-who {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.about-page-item-service {
+    max-width: 1200px;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+
+    border: 1px solid #e3e3e3;
+}
+
+/* Textos */
+.about-page-texts {
+    width: 100%;
+    max-width: 1200px;
+
+    padding: 20px 0;
+    margin-top: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+
+    border-bottom: 1px solid var(--dark-color);
+}
+
+.about-page-section-who_title,
+.about-page-texts_title {
+    font-size: 22px;
+    margin-top: 1.6rem;
+}
+
+.about-page-section-who_description,
+.about-page-texts_description {
+    font-size: 18px;
+    line-height: 2rem;
+}
+
+.about-page-item-service_title {
     width: 100%;
     font-size: 18px;
     padding: 5px;
@@ -56,102 +85,135 @@
     background-color: #f4f4f4;
 }
 
-.service-description {
+.about-page-item-service_description {
     font-size: 16px;
     line-height: 2rem;
     padding: 10px;
 }
 
-
-.btn-about-info {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-    gap: 20px
-}
-
-.section-about {
-    margin-top: 2rem;
-    flex-direction: row;
-}
-
-
-/* Conteúdo do lado Esquerdo da Sessão SOBRE */
-.about-images {
-    width: 50%;
-    /* Exibição, Alinhamento e Direção*/
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    /* Posicionamento */
-    position: relative;
-}
-
-.internalwork-image-about {
-    /* Dimensão e Posição */
-    width: 250px;
-    border-radius: 25px;
-    position: absolute;
-    top: 7rem;
-    left: 1rem;
-}
-
-.externalwork-image-about {
-    /* Dimensão e Posição */
-    width: 180px;
-    border-radius: 25px;
-    position: absolute;
-    top: 3rem;
-    right: 3rem;
-}
-
-.about-page-section-texts {
+.about-page-section-who_texts {
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.test-image {
+.about-page-item-service_title {
     width: 100%;
-    height: 250px;
-    object-fit: cover;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 5px;
+    border: 1px solid #e3e3e3;
+    background-color: #f4f4f4;
+}
+
+.about-page-item-service_description {
+    font-size: 16px;
+    line-height: 2rem;
+    padding: 10px;
 }
 
 
+/* Imagens */
+.about-page-images {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
 
+.about-page-images_internalwork-image {
+    width: 300px;
+    height: 325px;
+    border-radius: 10px;
+    margin-top: 2rem;
+}
 
+.about-page-images_externalwork-image {
+    width: 150px;
+    height: 175px;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
 
-@media screen and (max-width: 1023px) {
-    .section-about {
+/* Estilos Responsivos Desktop */
+@media screen and (max-width: 1205px) {
+
+    /* Sessão */
+    .about-page-item.section-who {
         flex-direction: column;
-        align-items: center;
     }
 
-    .about-images img:last-child {
-        display: none;
+    /* Textos */
+    .about-page-texts {
+        justify-content: center;
+        text-align: center;
     }
 
-    .about-images img {
-        width: 300px;
-        position: relative;
-        top: 0;
-        left: 0;
-        right: 0;
+    .about-page-section-who_title,
+    .about-page-texts_title {
+        width: 100%;
+        text-align: center;
     }
 
-    .about-images {
+    /* Imagens */
+    .about-page-images {
+        width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .about-page-images_externalwork-image {
+        position: relative;
+    }
+
+    .about-page-images img {
+        width: 350px;
+        height: 300px;
+        margin: 0;
+        object-fit: cover;
     }
 }
 
-@media screen and (max-width: 800px) {
+/* Estilos Responsivos Tablet */
+@media screen and (max-width: 768px) {
+    /* Textos */
     #about-page {
         text-align: center;
+    }
+
+    .about-page-texts {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-page-description span {
+        display: none;
+    }
+}
+
+/* Estilos Responsivos Mobile */
+@media screen and (max-width: 511px) {
+    /* Textos */
+    .about-page-title,
+    .about-page-description {
+        font-size: 22px;
+    }
+
+    .about-page-section-who_title,
+    .about-page-texts_title {
+        font-size: 20px;
+    }
+
+    .about-page-section-who_description,
+    .about-page-texts_description {
+        font-size: 16px;
+        line-height: 2rem;
     }
 }

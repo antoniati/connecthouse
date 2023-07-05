@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 
 import Navbar from "../../../components/Navbar";
-import Button from "../../../components/Button";
 import Footer from "../../../components/Footer";
 import SectionContainer from "../../../components/SectionContainer";
+import ContactButtons from "../../../components/ContactButtons";
 
 import "./styles.css";
 
@@ -149,39 +149,7 @@ const LightingProject: React.FC = () => {
                             Aproveite para agendar uma consulta gratuita e descubra como nossos serviços podem agregar valor ao seu ambiente. Estamos disponíveis no WhatsApp e Telegram para atender suas dúvidas e oferecer soluções personalizadas.
                         </p>
 
-                        <div className="project-content-contact-us_links">
-                            <a href="https://connecthouse.vercel.app/contato"> 
-                                <Button
-                                    text="Entre em Contato"
-                                    textColor="#FA9428"
-                                    fillColor="#141821"
-                                    borderColor="#FA9428"
-                                    hoverText="white"
-                                    hoverColor="#FAA64C"
-                                />
-
-                            </a>
-                            <a href="https://wa.me/5519989288560" target="_blank">
-                                <Button
-                                    text="Whatsapp"
-                                    textColor="#FFF"
-                                    fillColor="#25D366"
-                                    hoverColor="#52E086"
-                                    hoverText="white"
-                                    borderColor="#25D366"
-                                />
-                            </a>
-                            <a href="https://t.me/palmeiras" target="_blank">
-                                <Button
-                                    text="Telegram"
-                                    textColor="#FFF"
-                                    fillColor="#00BBCC"
-                                    hoverColor="#00CEE0"
-                                    hoverText="white"
-                                    borderColor="#00BBCC"
-                                />
-                            </a>
-                        </div>
+                       <ContactButtons />
                     </div>
                 </div>
                 <Footer logo="https://connecthouse.vercel.app/static/images/logo/logowhite.svg" />
