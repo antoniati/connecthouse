@@ -12,6 +12,7 @@ import "./styles.css"
 interface ServiceData {
   image: string;
   title: string;
+  subTitle: string;
   description: string;
 }
 
@@ -37,7 +38,7 @@ const Slider: React.FC = () => {
     <Swiper className="slider-wrapper" spaceBetween={20} breakpoints={{ 0: { slidesPerView: 1, }, 640: { slidesPerView: 2, }, 1023: { slidesPerView: 3, } }} >
       {servicesData.services.map((service: ServiceData, index: number) => (
         <SwiperSlide className="slider-item" key={index}>
-          <Card image={service.image} title={service.title} description={service.description} >
+          <Card image={service.image} title={service.title} description={service.subTitle} >
             <Link to="https://connecthouse.vercel.app/sobre">
               <Button text="Saiba Mais" textColor="#FA9428" fillColor="transparent" hoverColor="#FA9428" hoverText="white" borderColor="#FA9428" />
             </Link>

@@ -3,32 +3,38 @@
         {
             "image":"https://connecthouse.vercel.app/static/images/icons/home.svg",
             "title": "Automação Residencial e Predial",
-            "description": "Torne sua casa ou prédio mais inteligente e eficiente com nossa solução de automação"
+            "subTitle": "Torne sua casa ou prédio mais inteligente e eficiente com nossa solução de automação",
+            "description": "Na Connect House, entendemos que cada projeto de automação residencial e predial é único. Nossa equipe de profissionais altamente qualificados trabalha em estreita colaboração com você, desde a fase inicial de planejamento até a implementação completa do sistema. Com nossa experiência de mais de 10 anos no mercado, combinada com tecnologia avançada, oferecemos soluções personalizadas que se adequam às suas necessidades específicas. Transformamos casas e empresas em espaços conectados, seguros e inteligentes, proporcionando conforto, eficiência energética e controle na palma da sua mão."
         },
         {
             "image":"https://connecthouse.vercel.app/static/images/icons/network.svg",
             "title": "Cabeamento de Rede",
-            "description": "Garanta uma infraestrutura de rede robusta e confiável para sua empresa"
+            "subTitle": "Garanta uma infraestrutura de rede robusta e confiável para sua empresa",
+            "description": "Na Connect House, fornecemos soluções abrangentes de rede para garantir que sua residência ou empresa esteja equipada com uma infraestrutura de comunicação de ponta. Nossos serviços de cabeamento de rede incluem planejamento, instalação e certificação de cabos para garantir uma conexão estável e de alta velocidade. Com nossa experiência em soluções de rede, você terá uma conectividade sem limites, permitindo a transferência rápida de dados, a colaboração eficiente e o máximo desempenho dos seus dispositivos."
         },
         {
             "image":"https://connecthouse.vercel.app/static/images/icons/server.svg",
             "title": "Montagem de Racks de TI",
-            "description": "Organize e otimize sua infraestrutura de TI com a montagem profissional de racks"
+            "subTitle": "Organize e otimize sua infraestrutura de TI com a montagem profissional de racks",
+            "description": "Na Connect House cuidamos da montagem de racks de TI, proporcionando uma organização impecável e de fácil acesso aos seus equipamentos, garantindo a organização adequada dos equipamentos e facilitando a manutenção futura. Conecte-se sem limites e mantenha sua residência ou empresa sempre conectada."
         },
         {
             "image":"https://connecthouse.vercel.app/static/images/icons/cam.svg",
             "title": "Montagem de Racks CFTV",
-            "description": "Proteja seu patrimônio com nosso serviço de montagem de racks para sistemas de CFTV"
+            "subTitle": "Proteja seu patrimônio com nosso serviço de montagem de racks para sistemas de CFTV",
+            "description": "Na Connect House, priorizamos a segurança do seu espaço. Nossos especialistas em montagem de racks CFTV garantem uma implantação eficiente e uma organização impecável do sistema de monitoramento. Com nosso conhecimento em tecnologias de vigilância, criamos uma infraestrutura confiável para a instalação de câmeras de segurança e dispositivos relacionados. Além disso, nos certificamos de que todos os cabos estejam organizados e devidamente protegidos, proporcionando uma estética limpa e funcional. Com a montagem de racks CFTV da Connect House, você terá uma solução de vigilância eficiente e uma visão abrangente do seu espaço, garantindo a segurança e a tranquilidade desejadas."
         },
         {
             "image":"https://connecthouse.vercel.app/static/images/icons/optical-fiber.svg",
             "title": "Cabeamento de Fibra Ótica",
-            "description": "Tenha uma conexão de internet ultrarrápida e estável com o nosso serviço de cabeamento de fibra ótica"
+            "subTitle": "Tenha uma conexão de internet ultrarrápida e estável com o nosso serviço de cabeamento de fibra ótica",
+            "description": "A Connect House oferece serviços especializados em cabeamento de fibra ótica, fornecendo uma solução de comunicação de alta velocidade e confiabilidade. Com nossa experiência e conhecimento em tecnologia de fibra ótica, garantimos a instalação precisa e a fusão perfeita das fibras, resultando em uma infraestrutura de comunicação de última geração. O cabeamento de fibra ótica oferece uma transferência de dados rápida, segura e de longo alcance, essencial para atender às demandas crescentes de conectividade nos dias de hoje. Conte com a Connect House para uma conexão ultrarrápida e confiável, permitindo que você desfrute de uma experiência de comunicação incomparável."
         },
         {
             "image":"https://connecthouse.vercel.app/static/images/icons/link.svg",
             "title": "Fusão da Fibra Ótica",
-            "description": "Conte com nossa expertise para obter uma conexão de dados eficiente e confiável"
+            "subTitle": "Conte com nossa expertise para obter uma conexão de dados eficiente e confiável",
+            "description": "Na Connect House, entendemos que cada detalhe importa quando se trata de fusão de fibras ópticas. Nossa prioridade é oferecer a você uma solução confiável e de qualidade, permitindo que sua rede opere no seu máximo potencial. Conte conosco para uma fusão precisa da fibra ótica, garantindo uma comunicação eficiente, segura e livre de interferências."
         }
     ]
 }
