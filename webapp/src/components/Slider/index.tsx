@@ -38,7 +38,7 @@ const Slider: React.FC = () => {
       {servicesData.services.map((service: ServiceData, index: number) => (
         <SwiperSlide className="slider-item" key={index}>
           <Card image={service.image} title={service.title} description={service.description} >
-            <Link to="http://localhost:5173/services">
+            <Link to="https://connecthouse.vercel.app/sobre">
               <Button text="Saiba Mais" textColor="#FA9428" fillColor="transparent" hoverColor="#FA9428" hoverText="white" borderColor="#FA9428" />
             </Link>
           </Card>
