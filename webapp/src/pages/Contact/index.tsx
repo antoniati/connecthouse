@@ -31,7 +31,7 @@ const Contato: React.FC = () => {
       <SectionContainer id="contato-page">
         <Description descriptionText={contactDescription} />
         <ContactForm />
-        <Footer logo="https://connecthouse.vercel.app/logodark.svg"/>
+        <Footer logo="https://connecthouse.vercel.app/logowhite.svg"/>
       </SectionContainer>
     </div>
   );

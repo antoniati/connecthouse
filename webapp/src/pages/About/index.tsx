@@ -13,7 +13,6 @@ const About: React.FC = () => {
         <>
             <Navbar />
             <SectionContainer id="about-page">
-                <h1 className="title">Transforme sua Casa em um Ambiente Conectado, Seguro e Inteligente</h1>
                 <section className="section section-about">
                     <div className="about-page-section-texts">
                     <h2 className="section-title">Quem Somos</h2>
@@ -158,7 +157,7 @@ const About: React.FC = () => {
                     </Link>
                 </div>
                 </section>
-                <Footer logo="https://connecthouse.vercel.app/logodark.svg" />
+                <Footer logo="https://connecthouse.vercel.app/logowhite.svg" />
             </SectionContainer>
         </>
     );

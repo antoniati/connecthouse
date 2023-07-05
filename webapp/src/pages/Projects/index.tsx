@@ -104,6 +104,49 @@ const LightingProject: React.FC = () => {
             </a>
           ))}
         </div>
+        <div className="projects-page-contact">
+
+        <h2 className="projects-page-contact_title">Entre em Contato</h2>
+                    <p className="projects-page-contact_description">
+                        Descubra como a Connect House pode ajudá-lo a transformar sua casa ou
+                        empresa em um ambiente conectado, seguro e inteligente. Entre em contato conosco hoje mesmo
+                        para obter mais informações ou agendar uma consulta. Estamos ansiosos para trabalhar com você e
+                        tornar sua visão de automação uma realidade.
+                    </p>
+        <div className="btn-about-info">
+                    <a href="https://connecthouse.vercel.app/contato">
+                        <Button
+                            text="Entre em Contato"
+                            textColor="#FA9428"
+                            fillColor="#141821"
+                            borderColor="#FA9428"
+                            hoverText="white"
+                            hoverColor="#FAA64C"
+                        />
+
+                    </a>
+                    <a href="https://wa.me/5519989288560" target="_blank">
+                        <Button
+                            text="Whatsapp"
+                            textColor="#FFF"
+                            fillColor="#25D366"
+                            hoverColor="#52E086"
+                            hoverText="white"
+                            borderColor="#25D366"
+                        />
+                    </a>
+                    <a href="https://t.me/palmeiras" target="_blank">
+                        <Button
+                            text="Telegram"
+                            textColor="#FFF"
+                            fillColor="#00BBCC"
+                            hoverColor="#00CEE0"
+                            hoverText="white"
+                            borderColor="#00BBCC"
+                        />
+                    </a>
+                </div>
+        </div>
         <Footer logo="https://connecthouse.vercel.app/static/images/logo/logowhite.svg" />
       </SectionContainer>
     </>
