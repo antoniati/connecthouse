@@ -30,7 +30,7 @@ const LightingProject: React.FC = () => {
             <SectionContainer id="project-page">
                 <div className="project-content">
                     <div className="project-content-image_top">
-                        <img src="https://connecthouse.vercel.app/static/images/services/cftv/cftv-image-three.png" alt="" />
+                    <img src="https://connecthouse.vercel.app/static/images/services/ilum/ilum-image-four.png" alt="" />
                     </div>
 
                     <div className="project-content-introdution_item">
@@ -91,22 +91,22 @@ const LightingProject: React.FC = () => {
                         <div className="project-content-solutions_images">
                             <img
                                 alt="Imagem dos produtos de segurança modernos que foram comprados"
-                                src="https://connecthouse.vercel.app/static/images/services/cftv/cftv-image-five.png"
+                                src="https://connecthouse.vercel.app/static/images/services/ilum/ilum-image-one.png"
                             />
 
                             <img
                                 alt="Imagem das camêras de monitoramento instaladas"
-                                src="https://connecthouse.vercel.app/static/images/services/cftv/cftv-image-one.png"
+                                src="https://connecthouse.vercel.app/static/images/services/ilum/ilum-image-two.png"
                             />
 
                             <img
                                 alt="Imagem das camêras de monitoramento instaladas"
-                                src="https://connecthouse.vercel.app/static/images/services/cftv/cftv-image-two.png"
+                                src="https://connecthouse.vercel.app/static/images/services/ilum/ilum-image-three.png"
                             />
 
                             <img
                                 alt="Imagem das camêras de monitoramento instaladas"
-                                src="https://connecthouse.vercel.app/static/images/services/cftv/cftv-image-three.png"
+                                src="https://connecthouse.vercel.app/static/images/services/ilum/ilum-image-four.png"
                             />
                         </div>
                     </div>
