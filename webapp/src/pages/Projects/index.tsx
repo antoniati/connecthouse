@@ -1,86 +1,113 @@
 import React, { useEffect, useState } from "react";
-
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import SectionContainer from "../../components/SectionContainer";
+import Button from "../../components/Button";
+import "./styles.css";
 
 interface Project {
-    title: string;
-    image: string;
-    urlLink: string;
+  title: string;
+  image: string;
+  urlLink: string;
 }
 
 interface ProjectsData {
-    projects: Project[];
+  projects: Project[];
 }
 
-import "./styles.css";
-
 const LightingProject: React.FC = () => {
-    const [projectsData, setProjectsData] = useState<ProjectsData>({ projects: [] });
-    
-    const imageOpen = (image: HTMLImageElement) => {
-        image.classList.toggle("modal-open");
+  const [projectsData, setProjectsData] = useState<ProjectsData>({
+    projects: [],
+  });
+  const [activeCategory, setActiveCategory] = useState("Todos");
+
+  const imageOpen = (image: HTMLImageElement) => {
+    image.classList.toggle("modal-open");
+  };
+
+  useEffect(() => {
+    const images = document.querySelectorAll(".project-content-solutions_images img");
+    images.forEach((image) => {
+      const htmlImage = image as HTMLImageElement;
+      image.addEventListener("click", () => {
+        imageOpen(htmlImage);
+      });
+    });
+  }, []);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("https://connecthouse.vercel.app/static/data/projects.json");
+        const data = await response.json();
+
+        setProjectsData(data);
+      } catch (error) {
+        console.error("Error fetching projects data:", error);
+      }
     };
 
-    useEffect(() => {
-        const images = document.querySelectorAll(".project-content-solutions_images img");
-        images.forEach((image) => {
-            const htmlImage = image as HTMLImageElement;
-            image.addEventListener("click", () => {
-                imageOpen(htmlImage);
-            });
-        });
-    }, []);
+    fetchData();
+  }, []);
 
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await fetch("https://connecthouse.vercel.app/static/data/projects.json");
-                const data = await response.json();
+  const filteredProjects = activeCategory === "Todos"
+    ? projectsData.projects
+    : projectsData.projects.filter(
+        project => project.title.includes(activeCategory)
+      );
 
-                setProjectsData(data);
-            } catch (error) {
-                console.error("Error fetching projects data:", error);
-            }
-        };
-
-        fetchData();
-    }, []);
-
-
-    return (
-        <>
-            <Navbar />
-            <SectionContainer id="projects-page">
-               <h1 className="projects-page_title">São mais de 50 projetos realizados com sucesso!</h1>
-               <p className="projects-page_description">Atendemos às necessidades de residências e empresas de diferentes portes/</p>
-               <div className="projects-page_navigation">
-                 <div className="projects-page-navigation_button-all">Todos</div>
-                 <div className="projects-page-navigation_button-ilum">Iluminação</div>
-                 <div className="projects-page-navigation_button-cftv">CFTV</div>
-               </div>
-               <div className="projects-page-slider">
-               {projectsData.projects.map((project, index) => (
-                            <a href={project.urlLink} key={index}>
-                                <div className="projects-page-slider_item">
-                                    <img 
-                                        src={project.image}
-                                    />
-                                    <h2 className="projects-page-slider_title">
-                                        {project.title}
-                                    </h2>
-                                    <p className="projects-page-slider_description">
-                                        Ver Detalhes
-                                    </p>
-                                </div>
-
-                            </a>
-                    ))}
-               </div> 
-                <Footer logo="https://connecthouse.vercel.app/static/images/logo/logowhite.svg" />
-            </SectionContainer>
-        </>
-    )
+  return (
+    <>
+      <Navbar />
+      <SectionContainer id="projects-page">
+        <h1 className="projects-page_title">São mais de 50 projetos realizados com sucesso!</h1>
+        <p className="projects-page_description">Atendemos às necessidades de residências e empresas de diferentes portes</p>
+        <div className="projects-page-navigation">
+          <div
+            className={`projects-page-navigation_button-all ${activeCategory === "Todos" ? "active" : ""}`}
+            onClick={() => setActiveCategory("Todos")}
+          >
+            Todos
+          </div>
+          <div
+            className={`projects-page-navigation_button-ilum ${activeCategory === "Iluminação" ? "active" : ""}`}
+            onClick={() => setActiveCategory("Iluminação")}
+          >
+            Iluminação
+          </div>
+          <div
+            className={`projects-page-navigation_button-cftv ${activeCategory === "CFTV" ? "active" : ""}`}
+            onClick={() => setActiveCategory("CFTV")}
+          >
+            CFTV
+          </div>
+        </div>
+        <div className="projects-page-slider">
+          {filteredProjects.map((project, index) => (
+            <a href={project.urlLink} key={index}>
+              <div className="projects-page-slider_item">
+                <img src={project.image} alt={project.title} />
+                <h2 className="projects-page-slider_title">
+                  {project.title}
+                </h2>
+                <div className="project-page-slider_button-details">
+                <Button
+                  text="Ver Detalhes"
+                  textColor="#FA9428"
+                  fillColor="transparent"
+                  borderColor="#FA9428"
+                  hoverText="FA9428"
+                  hoverColor="transparent"
+                />
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+        <Footer logo="https://connecthouse.vercel.app/static/images/logo/logowhite.svg" />
+      </SectionContainer>
+    </>
+  );
 };
+
 export default LightingProject;
