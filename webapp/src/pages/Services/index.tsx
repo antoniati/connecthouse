@@ -38,32 +38,8 @@ const Services: React.FC = () => {
         <>
             <Navbar />
             <SectionContainer id="services-page">
-                <h1>Soluções Tecnologicas e Personalizadas</h1>
-                <p>
-                    {/* Descrição utilizando técnicas de SEO, marketing e persuasão  */}
-                </p>
-                {servicessData.services.map((services, index) => {
-                    return (
-                        <div className="services-page-card" key={index}>
-                            <div className="services-page-card_images">
-                                <img src="https://connecthouse.vercel.app/static/images/background.jpg" />
-                            </div>
-                            <div className="services-page-card_texts">
-                                <h2 className="services-page-card_title">
-                                    {services.title}
-                                </h2>
-                                <p>
-                                    {/* Descrição utilizando técnicas de SEO, marketing e persuasão  */}
-                                </p>
-                                <p>
-                                    {services.description}
-                                </p>
-                            </div>
-                        </div>
-
-                    )
-                })}
-
+                <h1>Estamoas atualizando esta página</h1>
+                <p>Entre em contato para mais informações</p>
                 <Footer logo="https://connecthouse.vercel.app/logowhite.svg" />
             </SectionContainer>
         </>
