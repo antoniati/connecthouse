@@ -1,39 +1,11 @@
-import React, { useEffect, useState } from "react";
-
+import React from "react";
 import Navbar from "../../components/Navbar";
 import SectionContainer from "../../components/SectionContainer";
 import Footer from "../../components/Footer";
 
 import "./styles.css";
 
-interface ServicesProps {
-    title: string;
-    description: string;
-}
-
-interface ServicessData {
-    services: ServicesProps[];
-}
-
 const Services: React.FC = () => {
-    const [servicessData, setServicessData] = useState<ServicessData>({
-        services: [],
-    });
-
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await fetch("https://connecthouse.vercel.app/static/data/services.json");
-                const data = await response.json();
-
-                setServicessData(data);
-            } catch (error) {
-                console.error("Error fetching projects data:", error);
-            }
-        };
-
-        fetchData();
-    }, []);
     return (
         <>
             <Navbar />
